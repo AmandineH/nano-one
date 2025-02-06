@@ -6,7 +6,7 @@
     >
       <nuxt-link to="/">
         <img
-          src="~/assets/nano-one/nano-one.png"
+          src="~/assets/nano-one/nano-one.svg"
           :class="viewport.isLessThan('tablet') ? 'h-28px' : 'h-48px'"
         />
       </nuxt-link>
