@@ -23,9 +23,9 @@ module.exports = {
         "2xl": "1536px",
       },
       fontFamily: {
-        sans: ["Inter", "Helvetica", "Arial", "sans-serif"],
-        display: ["Inter", "Helvetica", "Arial", "sans-serif"],
-        body: ["Inter", "Helvetica", "Arial", "sans-serif"],
+        sans: ["Montserrat", "Helvetica", "Arial", "sans-serif"],
+        display: ["Montserrat", "Helvetica", "Arial", "sans-serif"],
+        body: ["Montserrat", "Helvetica", "Arial", "sans-serif"],
       },
       fontWeight: {
         hairline: "100",

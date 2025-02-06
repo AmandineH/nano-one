@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <ForCreatorsTeamGreetings />
-  </div>
+  <div class="flex-grow bg-primary-500"></div>
 </template>
 
 <script setup>

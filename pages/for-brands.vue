@@ -1,5 +1,7 @@
 <template>
-  <div class="flex-grow bg-primary-500"></div>
+  <div>
+    <ForBrandsTeamGreetings/>
+  </div>
 </template>
 
 <script setup>

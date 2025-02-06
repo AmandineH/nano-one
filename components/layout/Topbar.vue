@@ -1,8 +1,8 @@
 <template>
   <div :class="theme === 'dark' ? 'bg-primary-500' : 'bg-white'">
     <div
-      class="max-w-1300px mx-auto flex items-center justify-between p-24px"
-      :class="viewport.isLessThan('tablet') ? 'p-16px' : 'p-24px'"
+      class="flex items-center justify-between mx-auto max-w-1300px"
+      :class="viewport.isLessThan('tablet') ? 'p-16px' : 'px-24px py-16px'"
     >
       <nuxt-link to="/">
         <img
