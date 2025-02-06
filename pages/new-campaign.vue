@@ -1,9 +1,112 @@
 <template>
-  <div class="flex-grow bg-primary-500"></div>
+  <div>
+    <div class="bg-primary-500">
+      <div
+        class="mx-auto gap-24px max-w-1300px"
+        :class="
+          viewport.isLessThan('tablet')
+            ? 'flex flex-col px-16px py-32px pb-0'
+            : 'grid grid-cols-5 px-24px py-48px pb-0'
+        "
+      >
+        <div
+          class="flex flex-col justify-center col-span-3"
+          :class="
+            viewport.isLessThan('tablet')
+              ? 'order-2 pb-32px'
+              : 'order-1 pb-48px'
+          "
+        >
+          <p
+            class="text-4xl font-bold text-white mb-8px"
+            :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
+          >
+            Unlock Influencer and UGC Marketing—Risk-Free
+          </p>
+
+          <p
+            class="text-lg text-white"
+            :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
+          >
+            Join hundreds of local brands tapping into nano and
+            micro-influencers for authentic, high-impact content. Sign up to
+            explore—no commitment, just opportunities.
+          </p>
+        </div>
+        <img
+          src="~/assets/pages/new-campaign/hero.png"
+          :class="
+            viewport.isLessThan('tablet') ? 'order-1' : 'order-2 col-span-2'
+          "
+        />
+      </div>
+    </div>
+
+    <div
+      class="mx-auto gap-24px max-w-1300px"
+      :class="
+        viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
+      "
+    >
+      <p class="text-2xl font-bold mb-16px">Frequently Asked Questions</p>
+
+      <UAccordion color="gray" :items="items" />
+    </div>
+  </div>
 </template>
 
 <script setup>
+const viewport = useViewport();
+
 definePageMeta({
   layout: "dark",
 });
+
+const items = [
+  {
+    label: "What is a nano or micro influencer?",
+    content:
+      "A nano or micro influencer is a content creator with between 3,000 to 50,000 followers. While their reach is smaller, their engagement rates often surpass those of mega influencers and celebrities, making them highly effective for targeted campaigns.",
+  },
+  {
+    label: "Will you randomly assign the nano influencer?",
+    content:
+      "No, our team carefully shortlists influencers who are genuinely interested in working with your brand. We ensure these influencers align with your brand’s content style and can bring the most value to your campaign.",
+  },
+  {
+    label:
+      "Do we get to review their content in case they do not understand our product?",
+    content:
+      "Yes, you can opt to review the influencers' content before it goes live. However, major misalignments are unlikely as we provide detailed campaign requirements that clearly communicate your brand and product to the influencers.",
+  },
+  {
+    label: "Are the deliverables going to be a story, reel, or post?",
+    content:
+      "The choice of social media platform and content type is entirely up to you. If you're unsure, our team will gladly provide recommendations based on your campaign goals.",
+  },
+  {
+    label:
+      "Will we be able to get insights and analytics to the content posted by influencers?",
+    content:
+      "Yes, we’ll provide a report at the end of your campaign, detailing the reach and engagement metrics. For full analytics access on Instagram, we can arrange for the influencers to collaborate with your official account on the posts.",
+  },
+  {
+    label: "What kind of business best suits micro/nano influencer marketing?",
+    content:
+      "Businesses offering consumer-facing, low-involvement products or experiences—like food and beverages, fashion, beauty, hairdressing, photography, museums, and exhibitions—are ideal candidates for nano and micro influencer marketing.",
+  },
+  {
+    label: "What happens after I fill out this form?",
+    content:
+      "You’ll receive a link to a welcome message from our team, along with another form to submit your campaign requirements. This is where you share details about your brand, product, or experience, and how you envision collaborating with our influencers.",
+  },
+  {
+    label: "Will I get to speak with anyone from your team?",
+    content:
+      "Absolutely! Drop us a line via email at info@one-each.com, and we’ll be happy to answer any questions as soon as we can.",
+  },
+].map((element, key) => ({
+  ...element,
+  label: `${key + 1}. ${element.label}`,
+}));
 </script>
