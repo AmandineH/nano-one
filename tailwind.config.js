@@ -142,7 +142,7 @@ module.exports = {
           950: "#401000",
         },
         white: "#FFFFFF",
-        black: "#000000",
+        black: "#0A0E12",
         "black-transparent": "#00000080",
 
         "primary-25": "#E6FAF9",

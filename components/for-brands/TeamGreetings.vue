@@ -16,16 +16,16 @@
             : 'pb-48px col-span-2 order-1'
         "
       >
-        <p class="text-2xl font-bold text-white mb-8px">
+        <p class="text-2xl font-bold text-white mb-16px">
           Greetings From The Team
         </p>
 
-        <p class="font-medium text-white text-md mb-8px">
+        <p class="text-white text-md mb-8px">
           We’re Daphne & Linhan, and we built NanoOne to help local brands
           connect with the right creators—easily, affordably, and effectively.
         </p>
 
-        <p class="font-medium text-white text-md mb-8px">
+        <p class="text-white text-md mb-8px">
           Finding the right influencers and managing collaborations shouldn’t be
           complicated or expensive. That’s why we make it simple, affordable,
           and effective—connecting you with passionate nano and
@@ -33,7 +33,7 @@
           high-impact content.
         </p>
 
-        <p class="font-medium text-white text-md mb-24px">
+        <p class="text-white text-md mb-24px">
           Ready to reach real, engaged audiences? Let’s make influencer
           marketing work for you.
         </p>

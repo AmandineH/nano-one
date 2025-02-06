@@ -34,7 +34,7 @@
         >
           <a
             href="mailto:info@one-each.com"
-            class="text-sm font-medium"
+            class="text-sm"
             :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
           >
             info@one-each.com
@@ -42,14 +42,14 @@
 
           <a
             href="tel:info@one-each.com"
-            class="text-sm font-medium"
+            class="text-sm"
             :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
           >
             +65 8888 8888
           </a>
 
           <div
-            class="text-sm font-medium"
+            class="text-sm"
             :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
           >
             <p>SQ Collective</p>
@@ -68,7 +68,7 @@
             to="/for-creators"
             variant="link"
             color="black"
-            class="text-sm font-medium underline"
+            class="text-sm underline"
           >
             For Creators
           </UButton>
@@ -77,7 +77,7 @@
             to="/for-brands"
             variant="link"
             color="black"
-            class="text-sm font-medium underline"
+            class="text-sm underline"
           >
             For Brands
           </UButton>
@@ -87,7 +87,7 @@
             target="_blank"
             variant="link"
             color="black"
-            class="text-sm font-medium underline"
+            class="text-sm underline"
           >
             Instagram
           </UButton>
@@ -125,7 +125,7 @@
         "
       >
         <p
-          class="text-xs font-medium"
+          class="text-xs"
           :class="
             viewport.isLessThan('tablet') ? 'order-2 text-center' : 'order-1'
           "
@@ -142,7 +142,7 @@
             target="_blank"
             variant="link"
             color="black"
-            class="text-xs font-medium underline"
+            class="text-xs underline"
           >
             Privacy Policy
           </UButton>
@@ -152,7 +152,7 @@
             target="_blank"
             variant="link"
             color="black"
-            class="text-xs font-medium underline"
+            class="text-xs underline"
           >
             Terms of Use
           </UButton>
