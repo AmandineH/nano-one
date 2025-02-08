@@ -42,6 +42,14 @@
       </div>
     </div>
 
+    <iframe
+      src="https://www.juicer.io/api/feeds/nano_0ne/iframe"
+      frameborder="0"
+      width="100%"
+      height="400"
+      style="display: block; margin: 0 auto"
+    ></iframe>
+
     <div
       class="mx-auto gap-24px max-w-1300px"
       :class="
@@ -110,3 +118,9 @@ const items = [
   label: `${key + 1}. ${element.label}`,
 }));
 </script>
+
+<style>
+.referral {
+  display: none !important;
+}
+</style>

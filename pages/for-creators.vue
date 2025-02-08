@@ -49,7 +49,8 @@
 
           <div class="flex gap-8px">
             <UButton
-              to="/creator-community"
+              to="https://forms.gle/DnWaexsMEWPAN5Pj7"
+              target="_blank"
               color="black"
               :class="viewport.isLessThan('tablet') ? 'flex-grow' : ''"
             >

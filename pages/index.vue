@@ -8,10 +8,12 @@
           : 'grid grid-cols-2 px-24px py-48px'
       "
     >
-      <div
-        class="flex flex-col justify-center"
-        :class="viewport.isLessThan('tablet') ? 'order-2' : 'order-1'"
-      >
+      <img
+        v-if="viewport.isLessThan('tablet')"
+        src="~/assets/pages/landing/hero-mobile.jpg"
+      />
+
+      <div class="flex flex-col justify-center">
         <p
           class="text-4xl font-bold mb-8px"
           :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
@@ -43,7 +45,8 @@
           </UButton>
 
           <UButton
-            to="/creator-community"
+            to="https://forms.gle/DnWaexsMEWPAN5Pj7"
+            target="_blank"
             variant="outline"
             color="black"
             :class="viewport.isLessThan('tablet') ? 'flex-grow' : ''"
@@ -56,10 +59,48 @@
           </UButton>
         </div>
       </div>
+
       <img
-        src="~/assets/pages/landing/influencer-marketing.png"
-        :class="viewport.isLessThan('tablet') ? 'order-1' : 'order-2'"
+        v-if="!viewport.isLessThan('tablet')"
+        src="~/assets/pages/landing/hero.png"
       />
+    </div>
+
+    <div class="bg-primary-500">
+      <div
+        class="mx-auto gap-24px max-w-1300px"
+        :class="viewport.isLessThan('tablet') ? 'py-32px' : 'py-48px'"
+      >
+        <p
+          class="text-white text-md font-medium"
+          :class="viewport.isLessThan('tablet') ? 'px-16px' : 'px-24px'"
+        >
+          It’s now easier than ever to build trust and connect with your
+          customers because we’ve made creating impactful, attention-grabbing
+          content effortless and affordable.
+        </p>
+
+        <UCarousel
+          :ui="{ container: 'gap-16px px-16px' }"
+          v-slot="{ item }"
+          :items="items"
+          arrows
+        >
+          <div class="h-320px py-24px">
+            <LibraryVideoPlayer :src="item" />
+          </div>
+        </UCarousel>
+
+        <p
+          class="text-white text-md font-medium"
+          :class="viewport.isLessThan('tablet') ? 'px-16px' : 'px-24px'"
+        >
+          Our creators are a diverse community of all ages, backgrounds, and
+          ethnicities. Covering a vast range of niches, they craft engaging
+          content that resonates with audiences across Instagram and TikTok,
+          driving real impact where it matters most.
+        </p>
+      </div>
     </div>
 
     <ForBrandsWhy />
@@ -123,4 +164,26 @@
 
 <script setup>
 const viewport = useViewport();
+
+const items = [
+  "highlight-1.mov",
+  "highlight-2.mov",
+  "highlight-3.mp4",
+  "highlight-4.mp4",
+  "highlight-5.mp4",
+  "highlight-6.mp4",
+  "highlight-7.mp4",
+  "highlight-8.mp4",
+  "highlight-9.mp4",
+  "highlight-10.mp4",
+  "highlight-11.mp4",
+  "highlight-12.mp4",
+  "highlight-13.mp4",
+  "highlight-14.mp4",
+  "highlight-15.mp4",
+  "highlight-16.mp4",
+  "highlight-17.mp4",
+  "highlight-18.mov",
+  "highlight-19.mov",
+];
 </script>
