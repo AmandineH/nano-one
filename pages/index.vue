@@ -110,21 +110,32 @@
 
     <ForBrandsWhy />
 
+    <div
+      class="mx-auto gap-24px max-w-1300px"
+      :class="
+        viewport.isLessThan('tablet')
+          ? 'flex flex-col px-16px py-32px'
+          : 'grid grid-cols-4 px-24px py-48px'
+      "
+    >
+      <p class="text-2xl font-bold text-white mb-16px">
+        Why We Work With Nano & Micro Influencers
+      </p>
+    </div>
+
     <div class="bg-primary-500">
       <div
         class="mx-auto gap-24px max-w-1300px"
         :class="
           viewport.isLessThan('tablet')
-            ? 'flex flex-col px-16px py-32px pb-0'
-            : 'grid grid-cols-4 px-24px py-48px pb-0'
+            ? 'flex flex-col px-16px py-32px'
+            : 'grid grid-cols-4 px-24px py-48px'
         "
       >
         <div
           class="flex flex-col justify-center"
           :class="
-            viewport.isLessThan('tablet')
-              ? 'pb-32px order-2'
-              : 'pb-48px col-span-3 order-1'
+            viewport.isLessThan('tablet') ? 'order-2' : 'col-span-3 order-1'
           "
         >
           <p class="text-2xl font-bold text-white mb-16px">Did You Know?</p>
@@ -157,10 +168,12 @@
         </div>
 
         <div
-          class="flex flex-col justify-end"
+          class="flex flex-col justify-end items-start"
           :class="viewport.isLessThan('tablet') ? 'order-1' : 'order-2'"
         >
-          <img src="~/assets/pages/landing/working-with-influencers.png" />
+          <div class="border-1 border-white rounded-lg max-h-200px">
+            <img src="~/assets/pages/landing/working-with-influencers.png" class="w-full max-h-200px object-contain object-center" />
+          </div>
         </div>
       </div>
     </div>
