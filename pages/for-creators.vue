@@ -116,7 +116,7 @@
           <div
             v-for="(reason, key) in reasons"
             :key="key"
-            class="grid grid-cols-5 border-white border-2px rounded-8px"
+            class="grid grid-cols-5 border-white border-1 rounded-8px"
           >
             <div class="col-span-4 p-16px">
               <p class="text-lg font-semibold text-primary-500">

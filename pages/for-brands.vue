@@ -72,18 +72,8 @@
       </div>
     </div>
 
-    <div class="bg-black">
-      <div
-        class="mx-auto gap-24px max-w-1300px"
-        :class="
-          viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
-        "
-      >
-        <p class="text-2xl font-bold text-white mb-16px">
-          What We Can Do For You
-        </p>
-      </div>
-    </div>
+
+    <ForBrandsWhat />
 
     <div
       class="mx-auto gap-24px max-w-1300px"

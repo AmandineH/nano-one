@@ -81,10 +81,13 @@
         </p>
 
         <UCarousel
+          ref="carouselRef"
           :ui="{ container: 'gap-16px px-16px' }"
-          v-slot="{ item }"
           :items="items"
+          v-slot="{ item }"
           arrows
+          @mouseover="play = false"
+          @mouseleave="play = true"
         >
           <div class="h-320px py-24px">
             <LibraryVideoPlayer :src="item" />
@@ -102,6 +105,8 @@
         </p>
       </div>
     </div>
+
+    <ForBrandsWhat />
 
     <ForBrandsWhy />
 
@@ -186,4 +191,22 @@ const items = [
   "highlight-18.mov",
   "highlight-19.mov",
 ];
+
+const carouselRef = ref();
+
+let play = ref(true);
+
+onMounted(() => {
+  setInterval(() => {
+    if (play.value) {
+      if (!carouselRef.value) return;
+
+      if (carouselRef.value.page >= carouselRef.value.pages) {
+        return carouselRef.value.select(0);
+      }
+
+      carouselRef.value.next();
+    }
+  }, 3000);
+});
 </script>
