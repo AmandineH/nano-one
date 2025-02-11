@@ -110,7 +110,7 @@
 
     <ForBrandsWhy />
 
-    <div
+    <!-- <div
       class="mx-auto gap-24px max-w-1300px"
       :class="
         viewport.isLessThan('tablet')
@@ -121,7 +121,7 @@
       <p class="text-2xl font-bold text-white mb-16px">
         Why We Work With Nano & Micro Influencers
       </p>
-    </div>
+    </div> -->
 
     <div class="bg-primary-500">
       <div
@@ -167,14 +167,11 @@
           </div>
         </div>
 
-        <div
-          class="flex flex-col justify-end items-start"
-          :class="viewport.isLessThan('tablet') ? 'order-1' : 'order-2'"
-        >
-          <div class="border-1 border-white rounded-lg max-h-200px">
-            <img src="~/assets/pages/landing/working-with-influencers.png" class="w-full max-h-200px object-contain object-center" />
-          </div>
-        </div>
+        <img
+          src="~/assets/pages/landing/question-mark.png"
+          class="object-contain object-center"
+          :class="viewport.isLessThan('tablet') ? 'order-1 max-h-200px' : 'order-2'"
+        />
       </div>
     </div>
   </div>
