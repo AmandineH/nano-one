@@ -1,10 +1,5 @@
 <template>
   <UFormGroup
-    :ui="{
-      label: {
-        base: 'text-white',
-      },
-    }"
     :name="name"
     :label="label"
     :error="modelValue && !results.isValid"
