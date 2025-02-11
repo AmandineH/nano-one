@@ -1,21 +1,17 @@
 <template>
   <div>
-    <div class="bg-primary-500">
+    <div class="bg-primary-500 relative">
       <div
-        class="mx-auto gap-24px max-w-1300px"
+        class="mx-auto max-w-1300px min-h-[70vh]"
         :class="
           viewport.isLessThan('tablet')
-            ? 'flex flex-col px-16px py-32px pb-0'
-            : 'grid grid-cols-5 px-24px py-48px pb-0'
+            ? 'flex flex-col px-16px py-32px pr-0 pb-0'
+            : 'grid grid-cols-5 px-24px py-48px pb-0 gap-24px'
         "
       >
         <div
           class="flex flex-col justify-center col-span-3"
-          :class="
-            viewport.isLessThan('tablet')
-              ? 'order-2 pb-32px'
-              : 'order-1 pb-48px'
-          "
+          :class="viewport.isLessThan('tablet') ? 'pr-16px' : 'pb-48px'"
         >
           <p
             class="text-4xl font-bold text-white mb-8px"
@@ -36,9 +32,35 @@
         <img
           src="~/assets/pages/new-campaign/hero.png"
           :class="
-            viewport.isLessThan('tablet') ? 'order-1' : 'order-2 col-span-2'
+            viewport.isLessThan('tablet')
+              ? ''
+              : 'absolute bottom-0 right-0 h-full'
           "
         />
+      </div>
+    </div>
+
+    <div class="bg-black">
+      <div
+        class="mx-auto gap-24px max-w-1300px"
+        :class="
+          viewport.isLessThan('tablet')
+            ? 'flex flex-col px-16px py-32px'
+            : 'grid grid-cols-2 px-24px py-48px'
+        "
+      >
+        <form
+          name="contact"
+          method="post"
+          data-netlify="true"
+          action="./success.html"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="text" name="name" placeholder="Your Name" />
+          <input type="email" name="email" placeholder="Your Email" />
+          <!-- Add more input fields as needed -->
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </div>
 
