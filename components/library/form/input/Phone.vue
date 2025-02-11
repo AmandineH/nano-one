@@ -1,5 +1,10 @@
 <template>
   <UFormGroup
+    :ui="{
+      label: {
+        base: 'text-white',
+      },
+    }"
     :name="name"
     :label="label"
     :error="modelValue && !results.isValid"
@@ -7,6 +12,9 @@
     <UButtonGroup
       :ui="{
         shadow: 'shadow-none',
+        wrapper: {
+          horizontal: 'bg-white',
+        },
       }"
       class="w-full"
     >

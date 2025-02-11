@@ -50,11 +50,16 @@
         "
       >
         <div
-          class="border-1 border-white rounded-8px p-16px bg-white"
+          class="border-1 border-white rounded-8px p-16px"
           :class="viewport.isLessThan('tablet') ? '' : 'w-1/2'"
         >
           <UForm :state="state" class="grid grid-cols-2 gap-16px">
             <UFormGroup
+              :ui="{
+                label: {
+                  base: 'text-white',
+                },
+              }"
               label="First Name"
               name="firstName"
             >
@@ -62,6 +67,11 @@
             </UFormGroup>
 
             <UFormGroup
+              :ui="{
+                label: {
+                  base: 'text-white',
+                },
+              }"
               label="Last Name"
               name="lastName"
             >
@@ -69,6 +79,11 @@
             </UFormGroup>
 
             <UFormGroup
+              :ui="{
+                label: {
+                  base: 'text-white',
+                },
+              }"
               label="Email"
               name="email"
               class="col-span-2"
@@ -77,6 +92,11 @@
             </UFormGroup>
 
             <UFormGroup
+              :ui="{
+                label: {
+                  base: 'text-white',
+                },
+              }"
               label="Company Name"
               name="companyName"
               class="col-span-2"
