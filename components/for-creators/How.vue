@@ -8,7 +8,9 @@
           : 'px-24px py-48px pb-0'
       "
     >
-      <p class="text-2xl font-bold text-white mb-16px">What We Do</p>
+      <p class="text-2xl font-bold text-white mb-16px">
+        How We Can Work Together
+      </p>
 
       <UCarousel
         :ui="{ container: 'gap-16px', item: 'basis-full' }"
@@ -125,7 +127,7 @@
           </div>
         </template>
 
-        <template #content-creation="{ item }">
+        <template #talent-modeling="{ item }">
           <div
             class="grid grid-cols-3 gap-16px"
             :class="viewport.isLessThan('tablet') ? '' : 'pb-48px'"
@@ -151,72 +153,58 @@
 <script setup>
 const viewport = useViewport();
 
-import influencerPosts from "~/assets/pages/for-brands/influencer-posts.png";
-import ugc from "~/assets/pages/for-brands/ugc.png";
-import contentCreation from "~/assets/pages/for-brands/content-creation.png";
+import influencerPosts from "~/assets/pages/for-creators/influencer-posts.png";
+import ugc from "~/assets/pages/for-creators/ugc.png";
+import talent from "~/assets/pages/for-creators/talent.png";
 
 let items = [
   {
     slot: "influencer-posts",
     label: "Influencer Posts",
-    content: `<p class="text-white text-md font-medium mb-8px">
-                Nano and micro influencers create and share content on their own
-                social pages to showcase your brand.
+    content: `<p class="text-white text-md font-bold mb-8px">
+                Leverage Your Influence & Get Rewarded
               </p>
 
-              <p class="text-white text-md font-bold">Creative Control</p>
               <p class="text-white text-md font-medium mb-8px">
-                Influencers retain creative freedom to craft content that
-                resonates with their audience.
+                Brands are actively looking for creators like you to share their stories. Join a growing community of influencers who get exclusive access to paid collaborations, free products, and unique experiences. 
               </p>
 
-              <p class="text-white text-md font-bold">Content Rights</p>
               <p class="text-white text-md font-medium">
-                Content remains influencers’ properties and requires a loading
-                fees for brands to reuse it.
+                Your content can shape buying decisions—don't miss your chance to be part of something bigger.
               </p>`,
     src: influencerPosts,
   },
   {
     slot: "ugc",
     label: "User-Generated Content",
-    content: `<p class="text-white text-md font-medium mb-8px">
-                Video testimonials of your products and experiences that are
-                ideal for video ads.
+    content: `<p class="text-white text-md font-bold mb-8px">
+                Create. Earn. No Posting Required.
               </p>
 
-              <p class="text-white text-md font-bold">Creative Control</p>
               <p class="text-white text-md font-medium mb-8px">
-                Brands have control over content, working closely with creators
-                through up to 2 revisions.
+                Love creating content but don’t want to post on your own feed? Brands need fresh, high-quality visuals for their ads, websites, and social media. 
               </p>
 
-              <p class="text-white text-md font-bold">Content Rights</p>
               <p class="text-white text-md font-medium">
-                Brands have full rights to use content across campaigns and ads
-                without additional fees.
+                Many creators are already earning through UGC—why not you? It’s risk-free, flexible, and a great way to monetize your creativity.
               </p>`,
     src: ugc,
   },
   {
-    slot: "content-creation",
-    label: "Content Creation",
-    content: `<p class="text-white text-md font-medium mb-8px">
-                We handle everything from concept to execution, ensuring your
-                brand stands out on social media.
+    slot: "talent-modeling",
+    label: "Talent & Modeling",
+    content: `<p class="text-white text-md font-bold mb-8px">
+                Get Featured in Brand Campaigns
               </p>
 
               <p class="text-white text-md font-medium mb-8px">
-                Our team develops story-driven ideas, produces high-quality
-                videos and photos, sources the right talent, and crafts
-                compelling scripts and captions.
+                Work with top brands as a model or talent for product shoots, lifestyle visuals, and video campaigns. 
               </p>
 
               <p class="text-white text-md font-medium">
-                Every piece of content is optimized for platforms like Instagram
-                and TikTok, designed to engage your audience and drive results.
+                Whether it's for fashion, beauty, food, or lifestyle brands, your look and presence can bring their vision to life.
               </p>`,
-    src: contentCreation,
+    src: talent,
   },
 ];
 </script>

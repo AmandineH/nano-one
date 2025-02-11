@@ -73,7 +73,10 @@
 
     <ForBrandsWhat />
 
-    <div
+    <div class="h-10px bg-primary-500 w-full" />
+    <div class="h-10px bg-black w-full" />
+    <div class="h-10px bg-white w-full" />
+    <!-- <div
       class="mx-auto gap-24px max-w-1300px"
       :class="
         viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
@@ -82,22 +85,11 @@
       <p class="text-2xl font-bold mb-16px">
         How We Helped Businesses Like Yours
       </p>
-    </div>
+    </div> -->
 
     <ForBrandsWhy />
 
-    <div class="bg-black">
-      <div
-        class="mx-auto gap-24px max-w-1300px"
-        :class="
-          viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
-        "
-      >
-        <p class="text-2xl font-bold text-white mb-16px">
-          How We Work Together
-        </p>
-      </div>
-    </div>
+    <ForBrandsHow />
 
     <ForBrandsTeamGreetings />
   </div>
