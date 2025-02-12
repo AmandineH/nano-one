@@ -1,21 +1,17 @@
 <template>
   <div>
-    <div class="bg-primary-500">
+    <div class="bg-primary-500 relative">
       <div
-        class="mx-auto gap-24px max-w-1300px"
+        class="mx-auto max-w-1300px min-h-[70vh]"
         :class="
           viewport.isLessThan('tablet')
-            ? 'flex flex-col px-16px py-32px pb-0'
-            : 'grid grid-cols-5 px-24px py-48px pb-0'
+            ? 'flex flex-col px-16px py-32px pr-0 pb-0'
+            : 'grid grid-cols-5 px-24px py-48px gap-24px'
         "
       >
         <div
           class="flex flex-col justify-center col-span-3"
-          :class="
-            viewport.isLessThan('tablet')
-              ? 'order-2 pb-32px'
-              : 'order-1 pb-48px'
-          "
+          :class="viewport.isLessThan('tablet') ? 'pr-16px' : ''"
         >
           <p
             class="text-4xl font-bold text-white mb-8px"
@@ -36,11 +32,131 @@
         <img
           src="~/assets/pages/new-campaign/hero.png"
           :class="
-            viewport.isLessThan('tablet') ? 'order-1' : 'order-2 col-span-2'
+            viewport.isLessThan('tablet')
+              ? ''
+              : 'absolute bottom-0 right-0 h-full'
           "
         />
       </div>
     </div>
+
+    <div class="bg-black">
+      <div
+        class="mx-auto max-w-1300px"
+        :class="
+          viewport.isLessThan('tablet')
+            ? 'px-16px py-32px'
+            : 'px-24px py-48px flex justify-center'
+        "
+      >
+        <div
+          class="border-1 border-white rounded-8px p-16px"
+          :class="viewport.isLessThan('tablet') ? '' : 'w-1/2'"
+        >
+          <UForm :state="state" class="grid grid-cols-2 gap-16px">
+            <UFormGroup
+              :ui="{
+                label: {
+                  base: 'text-white',
+                },
+              }"
+              label="First Name"
+              name="firstName"
+            >
+              <UInput v-model="state.firstName" />
+            </UFormGroup>
+
+            <UFormGroup
+              :ui="{
+                label: {
+                  base: 'text-white',
+                },
+              }"
+              label="Last Name"
+              name="lastName"
+            >
+              <UInput v-model="state.lastName" />
+            </UFormGroup>
+
+            <UFormGroup
+              :ui="{
+                label: {
+                  base: 'text-white',
+                },
+              }"
+              label="Email"
+              name="email"
+              class="col-span-2"
+            >
+              <UInput v-model="state.email" />
+            </UFormGroup>
+
+            <UFormGroup
+              :ui="{
+                label: {
+                  base: 'text-white',
+                },
+              }"
+              label="Company Name"
+              name="companyName"
+              class="col-span-2"
+            >
+              <UInput v-model="state.companyName" />
+            </UFormGroup>
+
+            <LibraryFormInputPhone
+              :name="'phoneNumber'"
+              label="Phone Number"
+              v-model="state.phoneNumber"
+              class="col-span-2"
+            />
+          </UForm>
+
+          <form
+            name="contact"
+            method="post"
+            data-netlify="true"
+            action="./success.html"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input
+              type="text"
+              name="firstName"
+              :value="state.firstName"
+              class="hidden"
+            />
+            <input
+              type="text"
+              name="lastName"
+              :value="state.lastName"
+              class="hidden"
+            />
+            <input
+              type="email"
+              name="email"
+              :value="state.email"
+              class="hidden"
+            />
+            <input
+              type="text"
+              name="companyName"
+              :value="state.companyName"
+              class="hidden"
+            />
+            <input
+              type="text"
+              name="phoneNumber"
+              :value="state.phoneNumber"
+              class="hidden"
+            />
+
+            <UButton type="submit" class="mt-16px" block> Submit </UButton>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <ForCreatorsSocial />
 
     <div
       class="mx-auto gap-24px max-w-1300px"
@@ -60,6 +176,15 @@ const viewport = useViewport();
 
 definePageMeta({
   layout: "dark",
+});
+
+// form
+const state = reactive({
+  firstName: undefined,
+  lastName: undefined,
+  email: undefined,
+  companyName: undefined,
+  phoneNumber: undefined,
 });
 
 const items = [

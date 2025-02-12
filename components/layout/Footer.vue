@@ -45,7 +45,7 @@
             class="text-sm"
             :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
           >
-            +65 8888 8888
+            +65 8777 2721
           </a>
 
           <div

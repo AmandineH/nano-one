@@ -5,17 +5,13 @@
         class="mx-auto gap-24px max-w-1300px"
         :class="
           viewport.isLessThan('tablet')
-            ? 'flex flex-col px-16px py-32px pb-0'
-            : 'grid grid-cols-5 px-24px py-48px pb-0'
+            ? 'flex flex-col px-16px py-32px'
+            : 'grid grid-cols-5 px-24px py-48px'
         "
       >
         <div
           class="flex flex-col justify-center col-span-3"
-          :class="
-            viewport.isLessThan('tablet')
-              ? 'order-2 pb-32px'
-              : 'order-1 pb-48px'
-          "
+          :class="viewport.isLessThan('tablet') ? 'order-2' : 'order-1'"
         >
           <p
             class="text-4xl font-bold text-white"
@@ -49,7 +45,8 @@
 
           <div class="flex gap-8px">
             <UButton
-              to="/creator-community"
+              to="https://forms.gle/DnWaexsMEWPAN5Pj7"
+              target="_blank"
               color="black"
               :class="viewport.isLessThan('tablet') ? 'flex-grow' : ''"
             >
@@ -65,36 +62,19 @@
         </div>
         <img
           src="~/assets/pages/for-creators/hero.png"
+          class="object-contain object-center w-full"
           :class="
-            viewport.isLessThan('tablet') ? 'order-1' : 'order-2 col-span-2'
+            viewport.isLessThan('tablet')
+              ? 'order-1 max-h-200px'
+              : 'order-2 col-span-2 max-h-400px'
           "
         />
       </div>
     </div>
 
-    <div class="bg-black">
-      <div
-        class="mx-auto gap-24px max-w-1300px"
-        :class="
-          viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
-        "
-      >
-        <p class="text-2xl font-bold text-white mb-16px">
-          How We Can Work Together
-        </p>
-      </div>
-    </div>
+    <ForCreatorsHow />
 
-    <div
-      class="mx-auto gap-24px max-w-1300px"
-      :class="
-        viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
-      "
-    >
-      <p class="text-2xl font-bold mb-16px">
-        Join the Movement: See Our Creators in Action
-      </p>
-    </div>
+    <ForCreatorsSocial />
 
     <div class="bg-black">
       <div
@@ -115,7 +95,7 @@
           <div
             v-for="(reason, key) in reasons"
             :key="key"
-            class="grid grid-cols-5 border-white border-2px rounded-8px"
+            class="grid grid-cols-5 border-white border-1 rounded-8px"
           >
             <div class="col-span-4 p-16px">
               <p class="text-lg font-semibold text-primary-500">

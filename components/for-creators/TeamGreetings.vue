@@ -4,16 +4,14 @@
       class="mx-auto gap-24px max-w-1300px"
       :class="
         viewport.isLessThan('tablet')
-          ? 'flex flex-col px-16px py-32px pb-0'
-          : 'grid grid-cols-5 px-24px py-48px pb-0'
+          ? 'flex flex-col px-16px py-32px'
+          : 'grid grid-cols-5 px-24px py-48px'
       "
     >
       <div
         class="flex flex-col justify-center"
         :class="
-          viewport.isLessThan('tablet')
-            ? 'pb-32px order-2'
-            : 'pb-48px col-span-2 order-1'
+          viewport.isLessThan('tablet') ? 'order-2' : 'col-span-2 order-1'
         "
       >
         <p class="text-2xl font-bold text-white mb-16px">
@@ -45,7 +43,8 @@
 
         <div class="flex gap-8px">
           <UButton
-            to="/creator-community"
+            to="https://forms.gle/DnWaexsMEWPAN5Pj7"
+            target="_blank"
             color="black"
             :class="viewport.isLessThan('tablet') ? 'flex-grow' : ''"
           >
@@ -58,12 +57,13 @@
         </div>
       </div>
 
-      <div
-        class="flex flex-col justify-end col-span-3"
-        :class="viewport.isLessThan('tablet') ? 'order-1' : 'order-2'"
-      >
-        <img src="~/assets/nano-one/founders.png" />
-      </div>
+      <img
+        src="~/assets/nano-one/founders.png"
+        class="object-contain object-center"
+        :class="
+          viewport.isLessThan('tablet') ? 'order-1' : 'order-2 col-span-3'
+        "
+      />
     </div>
   </div>
 </template>

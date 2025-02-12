@@ -5,17 +5,13 @@
         class="mx-auto gap-24px max-w-1300px"
         :class="
           viewport.isLessThan('tablet')
-            ? 'flex flex-col px-16px py-32px pb-0'
-            : 'grid grid-cols-5 px-24px py-48px pb-0'
+            ? 'flex flex-col px-16px py-32px'
+            : 'grid grid-cols-5 px-24px py-48px'
         "
       >
         <div
           class="flex flex-col justify-center col-span-3"
-          :class="
-            viewport.isLessThan('tablet')
-              ? 'order-2 pb-32px'
-              : 'order-1 pb-48px'
-          "
+          :class="viewport.isLessThan('tablet') ? 'order-2' : 'order-1'"
         >
           <p
             class="text-4xl font-bold text-white"
@@ -64,28 +60,23 @@
           </div>
         </div>
         <img
-          src="~/assets/pages/for-creators/hero.png"
+          src="~/assets/pages/for-brands/hero.png"
+          class="object-contain object-right w-full"
           :class="
-            viewport.isLessThan('tablet') ? 'order-1' : 'order-2 col-span-2'
+            viewport.isLessThan('tablet')
+              ? 'order-1 max-h-200px'
+              : 'order-2 col-span-2 max-h-400px'
           "
         />
       </div>
     </div>
 
-    <div class="bg-black">
-      <div
-        class="mx-auto gap-24px max-w-1300px"
-        :class="
-          viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
-        "
-      >
-        <p class="text-2xl font-bold text-white mb-16px">
-          What We Can Do For You
-        </p>
-      </div>
-    </div>
+    <ForBrandsWhat />
 
-    <div
+    <div class="h-10px bg-primary-500 w-full" />
+    <div class="h-10px bg-black w-full" />
+    <div class="h-10px bg-white w-full" />
+    <!-- <div
       class="mx-auto gap-24px max-w-1300px"
       :class="
         viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
@@ -94,22 +85,11 @@
       <p class="text-2xl font-bold mb-16px">
         How We Helped Businesses Like Yours
       </p>
-    </div>
+    </div> -->
 
     <ForBrandsWhy />
 
-    <div class="bg-black">
-      <div
-        class="mx-auto gap-24px max-w-1300px"
-        :class="
-          viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
-        "
-      >
-        <p class="text-2xl font-bold text-white mb-16px">
-          How We Work Together
-        </p>
-      </div>
-    </div>
+    <ForBrandsHow />
 
     <ForBrandsTeamGreetings />
   </div>
