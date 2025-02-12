@@ -162,6 +162,17 @@ definePageMeta({
   layout: "dark",
 });
 
+useHead({
+  title: "For Creators | NanoOne",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Create. Collaborate. Get Rewarded. - Join a network of creators and work with local brands. Earn free products, exclusive experiences, and paid opportunities—all while doing what you love.",
+    },
+  ],
+});
+
 import relevant from "~/assets/pages/for-creators/relevant.png";
 import productsAndExperiences from "~/assets/pages/for-creators/products-and-experiences.png";
 import paidOpportunities from "~/assets/pages/for-creators/paid-opportunities.png";

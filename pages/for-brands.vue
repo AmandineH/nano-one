@@ -99,6 +99,17 @@
 <script setup>
 const viewport = useViewport();
 
+useHead({
+  title: "For Brands | NanoOne",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Engage. Influence. Grow Your Brand. - Join a network of creators and work with local brands. Earn free products, exclusive experiences, and paid opportunities—all while doing what you love.",
+    },
+  ],
+});
+
 definePageMeta({
   layout: "dark",
 });

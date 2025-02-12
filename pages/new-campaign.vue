@@ -174,6 +174,17 @@
 <script setup>
 const viewport = useViewport();
 
+useHead({
+  title: "Start New Campaign | NanoOne",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Unlock Influencer and UGC Marketing—Risk-Free - Join hundreds of local brands tapping into nano and micro-influencers for authentic, high-impact content. Sign up to explore—no commitment, just opportunities.",
+    },
+  ],
+});
+
 definePageMeta({
   layout: "dark",
 });

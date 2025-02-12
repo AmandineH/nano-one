@@ -10,12 +10,12 @@
     </div>
 
     <p class="text-md-regular mb-24px">
-      Thank you for visiting NanoOne (the \"Website\"). We are
-      committed to protecting your privacy and ensuring that your personal
-      information is handled securely and responsibly. This Privacy Policy
-      explains how we collect, use, disclose, and safeguard your personal
-      information when you use our Website. By accessing or using the Website,
-      you consent to the practices described in this Privacy Policy.
+      Thank you for visiting NanoOne (the \"Website\"). We are committed to
+      protecting your privacy and ensuring that your personal information is
+      handled securely and responsibly. This Privacy Policy explains how we
+      collect, use, disclose, and safeguard your personal information when you
+      use our Website. By accessing or using the Website, you consent to the
+      practices described in this Privacy Policy.
     </p>
 
     <div class="flex flex-col gap-24px">
@@ -53,6 +53,10 @@
 
 <script setup>
 const viewport = useViewport();
+
+useHead({
+  title: "Privacy Policy | NanoOne",
+});
 
 let items = [
   {

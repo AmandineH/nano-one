@@ -58,6 +58,10 @@
 <script setup>
 const viewport = useViewport();
 
+useHead({
+  title: "Terms of Use | NanoOne",
+});
+
 let items = [
   {
     list: [

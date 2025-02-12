@@ -238,6 +238,17 @@
 <script setup>
 const viewport = useViewport();
 
+useHead({
+  title: "NanoOne",
+  meta: [
+    {
+      name: "description",
+      content:
+        "We connect ambitious brands with creators to craft authentic, impactful content for meaningful products and experiences.",
+    },
+  ],
+});
+
 const items = [
   "highlight-1.mov",
   "highlight-2.mov",
