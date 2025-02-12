@@ -113,12 +113,12 @@
           </UForm>
 
           <form
-            name="contact"
+            name="new-campaign"
             method="post"
             data-netlify="true"
             action="./success.html"
           >
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="new-campaign" />
             <input
               type="text"
               name="firstName"
