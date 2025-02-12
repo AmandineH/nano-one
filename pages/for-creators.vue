@@ -85,7 +85,41 @@
       >
         <p class="text-2xl font-bold text-white mb-16px">Why Work With Us</p>
 
+        <UCarousel
+          v-if="viewport.isLessThan('tablet')"
+          ref="carouselRef"
+          :ui="{ container: 'gap-16px', item: 'basis-full' }"
+          :items="$manipulate.cutArray(reasons, 3)"
+          v-slot="{ item }"
+          indicators
+          class="pb-48px"
+        >
+          <div class="flex flex-col gap-16px">
+            <div
+              v-for="(reason, key) in item"
+              :key="key"
+              class="grid flex-grow grid-cols-5 border-white border-1 rounded-8px"
+            >
+              <p
+                class="col-span-5 text-lg font-semibold text-primary-500 px-16px pt-16px"
+              >
+                {{ reason.title }}
+              </p>
+              <p class="col-span-4 text-white text-md px-16px pb-16px">
+                {{ reason.description }}
+              </p>
+
+              <div class="relative">
+                <img
+                  :src="reason.src"
+                  class="absolute bottom-0 right-0 object-contain object-bottom h-full"
+                />
+              </div>
+            </div>
+          </div>
+        </UCarousel>
         <div
+          v-else
           :class="
             viewport.isLessThan('tablet')
               ? 'flex flex-col gap-16px'
@@ -123,6 +157,7 @@
 
 <script setup>
 const viewport = useViewport();
+const { $manipulate } = useNuxtApp();
 
 definePageMeta({
   layout: "dark",

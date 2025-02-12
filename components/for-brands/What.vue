@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black relative">
+  <div class="relative bg-black">
     <div
       class="mx-auto gap-24px max-w-1300px"
       :class="
@@ -11,9 +11,9 @@
       <p class="text-2xl font-bold text-white mb-16px">What We Do</p>
 
       <UCarousel
-        :ui="{ container: 'gap-16px', item: 'basis-full' }"
         v-if="viewport.isLessThan('tablet')"
         ref="carouselRef"
+        :ui="{ container: 'gap-16px', item: 'basis-full' }"
         :items="items"
         v-slot="{ item, index }"
         indicators
@@ -25,13 +25,13 @@
             :class="viewport.isLessThan('tablet') ? 'pr-16px' : ''"
           >
             <div
-              class="grid grid-cols-5 gap-16px w-full border-1 border-white rounded-md px-16px py-8px mb-24px"
+              class="grid w-full grid-cols-5 border-white rounded-md gap-16px border-1 px-16px py-8px mb-24px"
             >
               <p class="text-lg font-semibold text-left text-white">
                 0{{ index + 1 }}
               </p>
               <p
-                class="text-lg font-semibold col-span-4 truncate text-left text-white"
+                class="col-span-4 text-lg font-semibold text-left text-white truncate"
               >
                 {{ item.label }}
               </p>
@@ -71,7 +71,7 @@
         class="w-full"
       >
         <template #default="{ item, index, selected }">
-          <div class="grid grid-cols-5 gap-16px w-full">
+          <div class="grid w-full grid-cols-5 gap-16px">
             <p
               class="text-lg font-semibold text-left"
               :class="[selected ? 'text-white' : 'text-gray-700']"
@@ -79,7 +79,7 @@
               0{{ index + 1 }}
             </p>
             <p
-              class="text-lg font-semibold col-span-4 truncate text-left"
+              class="col-span-4 text-lg font-semibold text-left truncate"
               :class="[selected ? 'text-white' : 'text-gray-700']"
             >
               {{ item.label }}
@@ -159,19 +159,19 @@ let items = [
   {
     slot: "influencer-posts",
     label: "Influencer Posts",
-    content: `<p class="text-white text-md font-medium mb-8px">
+    content: `<p class="font-medium text-white text-md mb-8px">
                 Nano and micro influencers create and share content on their own
                 social pages to showcase your brand.
               </p>
 
-              <p class="text-white text-md font-bold">Creative Control</p>
-              <p class="text-white text-md font-medium mb-8px">
+              <p class="font-bold text-white text-md">Creative Control</p>
+              <p class="font-medium text-white text-md mb-8px">
                 Influencers retain creative freedom to craft content that
                 resonates with their audience.
               </p>
 
-              <p class="text-white text-md font-bold">Content Rights</p>
-              <p class="text-white text-md font-medium">
+              <p class="font-bold text-white text-md">Content Rights</p>
+              <p class="font-medium text-white text-md">
                 Content remains influencers’ properties and requires a loading
                 fees for brands to reuse it.
               </p>`,
@@ -180,19 +180,19 @@ let items = [
   {
     slot: "ugc",
     label: "User-Generated Content",
-    content: `<p class="text-white text-md font-medium mb-8px">
+    content: `<p class="font-medium text-white text-md mb-8px">
                 Video testimonials of your products and experiences that are
                 ideal for video ads.
               </p>
 
-              <p class="text-white text-md font-bold">Creative Control</p>
-              <p class="text-white text-md font-medium mb-8px">
+              <p class="font-bold text-white text-md">Creative Control</p>
+              <p class="font-medium text-white text-md mb-8px">
                 Brands have control over content, working closely with creators
                 through up to 2 revisions.
               </p>
 
-              <p class="text-white text-md font-bold">Content Rights</p>
-              <p class="text-white text-md font-medium">
+              <p class="font-bold text-white text-md">Content Rights</p>
+              <p class="font-medium text-white text-md">
                 Brands have full rights to use content across campaigns and ads
                 without additional fees.
               </p>`,
@@ -201,18 +201,18 @@ let items = [
   {
     slot: "content-creation",
     label: "Content Creation",
-    content: `<p class="text-white text-md font-medium mb-8px">
+    content: `<p class="font-medium text-white text-md mb-8px">
                 We handle everything from concept to execution, ensuring your
                 brand stands out on social media.
               </p>
 
-              <p class="text-white text-md font-medium mb-8px">
+              <p class="font-medium text-white text-md mb-8px">
                 Our team develops story-driven ideas, produces high-quality
                 videos and photos, sources the right talent, and crafts
                 compelling scripts and captions.
               </p>
 
-              <p class="text-white text-md font-medium">
+              <p class="font-medium text-white text-md">
                 Every piece of content is optimized for platforms like Instagram
                 and TikTok, designed to engage your audience and drive results.
               </p>`,

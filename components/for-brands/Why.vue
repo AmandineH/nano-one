@@ -43,6 +43,7 @@
 
 <script setup>
 const viewport = useViewport();
+const { $manipulate } = useNuxtApp();
 
 import costEffective from "~/assets/pages/for-brands/cost-effective.png";
 import simple from "~/assets/pages/for-brands/simple.png";

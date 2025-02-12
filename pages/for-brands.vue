@@ -61,7 +61,7 @@
         </div>
         <img
           src="~/assets/pages/for-brands/hero.png"
-          class="object-contain object-right w-full"
+          class="object-contain object-center w-full"
           :class="
             viewport.isLessThan('tablet')
               ? 'order-1 max-h-200px'
@@ -73,9 +73,9 @@
 
     <ForBrandsWhat />
 
-    <div class="h-10px bg-primary-500 w-full" />
-    <div class="h-10px bg-black w-full" />
-    <div class="h-10px bg-white w-full" />
+    <div class="w-full h-10px bg-primary-500" />
+    <div class="w-full bg-black h-10px" />
+    <div class="w-full bg-white h-10px" />
     <!-- <div
       class="mx-auto gap-24px max-w-1300px"
       :class="
