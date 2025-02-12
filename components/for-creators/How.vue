@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-black relative">
+  <div class="relative bg-black">
     <div
-      class="mx-auto gap-24px max-w-1300px"
+      class="mx-auto max-w-1300px"
       :class="
         viewport.isLessThan('tablet')
           ? 'px-16px py-32px pb-0 pr-0'
@@ -15,11 +15,9 @@
       <UCarousel
         :ui="{ container: 'gap-16px', item: 'basis-full' }"
         v-if="viewport.isLessThan('tablet')"
-        ref="carouselRef"
         :items="items"
         v-slot="{ item, index }"
         indicators
-        class="w-full"
       >
         <div :class="viewport.isLessThan('tablet') ? 'flex flex-col' : ''">
           <div
@@ -27,13 +25,13 @@
             :class="viewport.isLessThan('tablet') ? 'pr-16px' : ''"
           >
             <div
-              class="grid grid-cols-5 gap-16px w-full border-1 border-white rounded-md px-16px py-8px mb-24px"
+              class="grid w-full grid-cols-5 border-white rounded-md gap-16px border-1 px-16px py-8px mb-24px"
             >
-              <p class="text-lg font-semibold text-left text-white">
+              <p class="text-lg font-bold text-left text-white">
                 0{{ index + 1 }}
               </p>
               <p
-                class="text-lg font-semibold col-span-4 truncate text-left text-white"
+                class="col-span-4 text-lg font-bold text-left text-white truncate"
               >
                 {{ item.label }}
               </p>
@@ -70,18 +68,17 @@
         }"
         :items="items"
         orientation="vertical"
-        class="w-full"
       >
         <template #default="{ item, index, selected }">
-          <div class="grid grid-cols-5 gap-16px w-full">
+          <div class="grid w-full grid-cols-5 gap-16px">
             <p
-              class="text-lg font-semibold text-left"
+              class="text-lg font-bold text-left"
               :class="[selected ? 'text-white' : 'text-gray-700']"
             >
               0{{ index + 1 }}
             </p>
             <p
-              class="text-lg font-semibold col-span-4 truncate text-left"
+              class="col-span-4 text-lg font-bold text-left truncate"
               :class="[selected ? 'text-white' : 'text-gray-700']"
             >
               {{ item.label }}
@@ -161,15 +158,15 @@ let items = [
   {
     slot: "influencer-posts",
     label: "Influencer Posts",
-    content: `<p class="text-white text-md font-bold mb-8px">
+    content: `<p class="font-bold text-white text-md mb-8px">
                 Leverage Your Influence & Get Rewarded
               </p>
 
-              <p class="text-white text-md font-medium mb-8px">
+              <p class="font-medium text-white text-md mb-8px">
                 Brands are actively looking for creators like you to share their stories. Join a growing community of influencers who get exclusive access to paid collaborations, free products, and unique experiences. 
               </p>
 
-              <p class="text-white text-md font-medium">
+              <p class="font-medium text-white text-md">
                 Your content can shape buying decisions—don't miss your chance to be part of something bigger.
               </p>`,
     src: influencerPosts,
@@ -177,15 +174,15 @@ let items = [
   {
     slot: "ugc",
     label: "User-Generated Content",
-    content: `<p class="text-white text-md font-bold mb-8px">
+    content: `<p class="font-bold text-white text-md mb-8px">
                 Create. Earn. No Posting Required.
               </p>
 
-              <p class="text-white text-md font-medium mb-8px">
+              <p class="font-medium text-white text-md mb-8px">
                 Love creating content but don’t want to post on your own feed? Brands need fresh, high-quality visuals for their ads, websites, and social media. 
               </p>
 
-              <p class="text-white text-md font-medium">
+              <p class="font-medium text-white text-md">
                 Many creators are already earning through UGC—why not you? It’s risk-free, flexible, and a great way to monetize your creativity.
               </p>`,
     src: ugc,
@@ -193,15 +190,15 @@ let items = [
   {
     slot: "talent-modeling",
     label: "Talent & Modeling",
-    content: `<p class="text-white text-md font-bold mb-8px">
+    content: `<p class="font-bold text-white text-md mb-8px">
                 Get Featured in Brand Campaigns
               </p>
 
-              <p class="text-white text-md font-medium mb-8px">
+              <p class="font-medium text-white text-md mb-8px">
                 Work with top brands as a model or talent for product shoots, lifestyle visuals, and video campaigns. 
               </p>
 
-              <p class="text-white text-md font-medium">
+              <p class="font-medium text-white text-md">
                 Whether it's for fashion, beauty, food, or lifestyle brands, your look and presence can bring their vision to life.
               </p>`,
     src: talent,

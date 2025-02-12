@@ -1,7 +1,7 @@
 <template>
   <div class="relative bg-black">
     <div
-      class="mx-auto gap-24px max-w-1300px"
+      class="mx-auto max-w-1300px"
       :class="
         viewport.isLessThan('tablet')
           ? 'px-16px py-32px pb-0 pr-0'
@@ -12,12 +12,10 @@
 
       <UCarousel
         v-if="viewport.isLessThan('tablet')"
-        ref="carouselRef"
         :ui="{ container: 'gap-16px', item: 'basis-full' }"
         :items="items"
         v-slot="{ item, index }"
         indicators
-        class="w-full"
       >
         <div :class="viewport.isLessThan('tablet') ? 'flex flex-col' : ''">
           <div
@@ -27,11 +25,11 @@
             <div
               class="grid w-full grid-cols-5 border-white rounded-md gap-16px border-1 px-16px py-8px mb-24px"
             >
-              <p class="text-lg font-semibold text-left text-white">
+              <p class="text-lg font-bold text-left text-white">
                 0{{ index + 1 }}
               </p>
               <p
-                class="col-span-4 text-lg font-semibold text-left text-white truncate"
+                class="col-span-4 text-lg font-bold text-left text-white truncate"
               >
                 {{ item.label }}
               </p>
@@ -68,18 +66,17 @@
         }"
         :items="items"
         orientation="vertical"
-        class="w-full"
       >
         <template #default="{ item, index, selected }">
           <div class="grid w-full grid-cols-5 gap-16px">
             <p
-              class="text-lg font-semibold text-left"
+              class="text-lg font-bold text-left"
               :class="[selected ? 'text-white' : 'text-gray-700']"
             >
               0{{ index + 1 }}
             </p>
             <p
-              class="col-span-4 text-lg font-semibold text-left truncate"
+              class="col-span-4 text-lg font-bold text-left truncate"
               :class="[selected ? 'text-white' : 'text-gray-700']"
             >
               {{ item.label }}

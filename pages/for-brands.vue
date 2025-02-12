@@ -2,11 +2,11 @@
   <div>
     <div class="bg-primary-500">
       <div
-        class="mx-auto gap-24px max-w-1300px"
+        class="mx-auto max-w-1300px"
         :class="
           viewport.isLessThan('tablet')
             ? 'flex flex-col px-16px py-32px'
-            : 'grid grid-cols-5 px-24px py-48px'
+            : 'grid grid-cols-5 px-24px py-48px gap-24px'
         "
       >
         <div
@@ -76,8 +76,9 @@
     <div class="w-full h-10px bg-primary-500" />
     <div class="w-full bg-black h-10px" />
     <div class="w-full bg-white h-10px" />
+
     <!-- <div
-      class="mx-auto gap-24px max-w-1300px"
+      class="mx-auto max-w-1300px"
       :class="
         viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
       "

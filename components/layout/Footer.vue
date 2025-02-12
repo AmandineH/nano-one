@@ -98,7 +98,7 @@
           :class="viewport.isLessThan('tablet') ? 'order-1' : 'order-3'"
         >
           <p
-            class="text-lg font-bold mb-16px text-primary-500"
+            class="text-lg font-semibold mb-16px text-primary-500"
             :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
           >
             Reach your customers with result-driven content now

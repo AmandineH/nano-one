@@ -1,11 +1,11 @@
 <template>
   <div class="bg-primary-500">
     <div
-      class="mx-auto gap-24px max-w-1300px"
+      class="mx-auto max-w-1300px"
       :class="
         viewport.isLessThan('tablet')
           ? 'flex flex-col px-16px py-32px'
-          : 'grid grid-cols-5 px-24px py-48px'
+          : 'grid grid-cols-5 gap-24px px-24px py-48px'
       "
     >
       <div

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-primary-500 relative">
+    <div class="relative bg-primary-500">
       <div
         class="mx-auto max-w-1300px min-h-[70vh]"
         :class="
@@ -50,7 +50,7 @@
         "
       >
         <div
-          class="border-1 border-white rounded-8px p-16px"
+          class="border-white border-1 rounded-8px p-16px"
           :class="viewport.isLessThan('tablet') ? '' : 'w-1/2'"
         >
           <UForm :state="state" class="grid grid-cols-2 gap-16px">
@@ -159,7 +159,7 @@
     <ForCreatorsSocial />
 
     <div
-      class="mx-auto gap-24px max-w-1300px"
+      class="mx-auto max-w-1300px"
       :class="
         viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
       "

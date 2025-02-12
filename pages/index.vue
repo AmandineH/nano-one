@@ -1,11 +1,11 @@
 <template>
   <div>
     <div
-      class="mx-auto gap-24px max-w-1300px"
+      class="mx-auto max-w-1300px"
       :class="
         viewport.isLessThan('tablet')
           ? 'flex flex-col px-16px py-32px'
-          : 'grid grid-cols-2 px-24px py-48px'
+          : 'grid grid-cols-2 px-24px py-48px gap-24px'
       "
     >
       <img
@@ -68,11 +68,11 @@
 
     <div class="bg-primary-500">
       <div
-        class="mx-auto gap-24px max-w-1300px"
+        class="mx-auto max-w-1300px"
         :class="viewport.isLessThan('tablet') ? 'py-32px' : 'py-48px'"
       >
         <p
-          class="text-white text-md font-medium"
+          class="font-medium text-white text-md"
           :class="viewport.isLessThan('tablet') ? 'px-16px' : 'px-24px'"
         >
           It’s now easier than ever to build trust and connect with your
@@ -95,7 +95,7 @@
         </UCarousel>
 
         <p
-          class="text-white text-md font-medium"
+          class="font-medium text-white text-md"
           :class="viewport.isLessThan('tablet') ? 'px-16px' : 'px-24px'"
         >
           Our creators are a diverse community of all ages, backgrounds, and
@@ -110,26 +110,82 @@
 
     <ForBrandsWhy />
 
-    <!-- <div
-      class="mx-auto gap-24px max-w-1300px"
+    <div
+      class="mx-auto max-w-1300px"
       :class="
-        viewport.isLessThan('tablet')
-          ? 'flex flex-col px-16px py-32px'
-          : 'grid grid-cols-4 px-24px py-48px'
+        viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
       "
     >
-      <p class="text-2xl font-bold text-white mb-16px">
+      <p class="text-2xl font-bold mb-16px">
         Why We Work With Nano & Micro Influencers
       </p>
-    </div> -->
+
+      <UCarousel
+        :ui="{ container: 'gap-16px', item: 'basis-full' }"
+        v-if="viewport.isLessThan('tablet')"
+        :items="stats"
+        v-slot="{ item }"
+        indicators
+        class="pb-48px"
+      >
+        <div class="flex flex-col gap-16px">
+          <p class="text-lg font-semibold mb-16px text-primary-500">
+            {{ item.description }}
+          </p>
+
+          <div class="flex flex-col flex-grow gap-16px">
+            <div
+              v-for="(number, key) in item.numbers"
+              :key="key"
+              class="flex-grow border-black rounded-md border-1 p-16px"
+            >
+              <p class="text-5xl font-bold text-primary-500">
+                {{ number.num }}
+              </p>
+
+              <p v-html="number.description" class="text-md" />
+            </div>
+          </div>
+        </div>
+      </UCarousel>
+      <div v-else>
+        <div class="grid grid-cols-3 gap-24px mb-16px">
+          <div v-for="(stat, key) in stats" :key="key">
+            <p class="text-lg font-semibold text-primary-500">
+              {{ stat.description }}
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-24px">
+          <div
+            v-for="(stat, key) in stats"
+            :key="key"
+            class="flex flex-col gap-16px"
+          >
+            <div
+              v-for="(number, key) in stat.numbers"
+              :key="key"
+              class="flex-grow border-black rounded-md border-1 p-16px"
+            >
+              <p class="text-5xl font-bold text-primary-500">
+                {{ number.num }}
+              </p>
+
+              <p v-html="number.description" class="text-md" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="bg-primary-500">
       <div
-        class="mx-auto gap-24px max-w-1300px"
+        class="mx-auto max-w-1300px"
         :class="
           viewport.isLessThan('tablet')
             ? 'flex flex-col px-16px py-32px'
-            : 'grid grid-cols-4 px-24px py-48px'
+            : 'grid grid-cols-4 px-24px py-48px gap-24px'
         "
       >
         <div
@@ -170,7 +226,9 @@
         <img
           src="~/assets/pages/landing/question-mark.png"
           class="object-contain object-center"
-          :class="viewport.isLessThan('tablet') ? 'order-1 max-h-200px' : 'order-2'"
+          :class="
+            viewport.isLessThan('tablet') ? 'order-1 max-h-200px' : 'order-2'
+          "
         />
       </div>
     </div>
@@ -219,4 +277,47 @@ onMounted(() => {
     }
   }, 3000);
 });
+
+let stats = [
+  {
+    description: "They are abundant & more affordable ...",
+    numbers: [
+      {
+        num: "65%",
+        description: `of <span class="underline">all Instagram influencers</span> are nano influencers.`,
+      },
+      {
+        num: "4 million",
+        description: `nano influencers exist across various platforms, <span class="underline">spanning numerous niches</span> like fitness, travel, beauty, and more.`,
+      },
+    ],
+  },
+  {
+    description: "... they have the attention of consumers who trust them ...",
+    numbers: [
+      {
+        num: "72%",
+        description: `of consumers <span class="underline">trust</span> advertising, opinions and product placements from influencers.`,
+      },
+      {
+        num: "1 in 4",
+        description: `consumers <span class="underline">bought</span> a product based on an influencer’s recommendation.`,
+      },
+    ],
+  },
+  {
+    description:
+      "... and your competitors are using them to reach your customers!",
+    numbers: [
+      {
+        num: "51%",
+        description: `of marketers <span class="underline">worked</span> with creators or influencers.`,
+      },
+      {
+        num: "70%",
+        description: `of them are <span class="underline">working</span> with Nano and Micro influencers.`,
+      },
+    ],
+  },
+];
 </script>

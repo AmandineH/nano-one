@@ -2,11 +2,11 @@
   <div>
     <div class="bg-primary-500">
       <div
-        class="mx-auto gap-24px max-w-1300px"
+        class="mx-auto max-w-1300px"
         :class="
           viewport.isLessThan('tablet')
             ? 'flex flex-col px-16px py-32px'
-            : 'grid grid-cols-5 px-24px py-48px'
+            : 'grid grid-cols-5 px-24px py-48px gap-24px'
         "
       >
         <div
@@ -78,7 +78,7 @@
 
     <div class="bg-black">
       <div
-        class="mx-auto gap-24px max-w-1300px"
+        class="mx-auto max-w-1300px"
         :class="
           viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
         "
@@ -87,7 +87,6 @@
 
         <UCarousel
           v-if="viewport.isLessThan('tablet')"
-          ref="carouselRef"
           :ui="{ container: 'gap-16px', item: 'basis-full' }"
           :items="$manipulate.cutArray(reasons, 3)"
           v-slot="{ item }"
@@ -101,7 +100,7 @@
               class="grid flex-grow grid-cols-5 border-white border-1 rounded-8px"
             >
               <p
-                class="col-span-5 text-lg font-semibold text-primary-500 px-16px pt-16px"
+                class="col-span-5 text-lg font-bold text-primary-500 px-16px pt-16px"
               >
                 {{ reason.title }}
               </p>
@@ -132,7 +131,7 @@
             class="grid grid-cols-5 border-white border-1 rounded-8px"
           >
             <div class="col-span-4 p-16px">
-              <p class="text-lg font-semibold text-primary-500">
+              <p class="text-lg font-bold text-primary-500">
                 {{ reason.title }}
               </p>
               <p class="text-white text-md">

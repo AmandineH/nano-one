@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-black relative">
+  <div class="relative bg-black">
     <div
-      class="mx-auto gap-24px max-w-1300px"
+      class="mx-auto max-w-1300px"
       :class="
         viewport.isLessThan('tablet')
           ? 'px-16px py-32px pb-0 pr-0'
@@ -13,11 +13,9 @@
       <UCarousel
         :ui="{ container: 'gap-16px', item: 'basis-full' }"
         v-if="viewport.isLessThan('tablet')"
-        ref="carouselRef"
         :items="items"
         v-slot="{ item, index }"
         indicators
-        class="w-full"
       >
         <div :class="viewport.isLessThan('tablet') ? 'flex flex-col' : ''">
           <div
@@ -25,13 +23,13 @@
             :class="viewport.isLessThan('tablet') ? 'pr-16px' : ''"
           >
             <div
-              class="grid grid-cols-5 gap-16px w-full border-1 border-white rounded-md px-16px py-8px mb-24px"
+              class="grid w-full grid-cols-5 border-white rounded-md gap-16px border-1 px-16px py-8px mb-24px"
             >
-              <p class="text-lg font-semibold text-left text-white">
+              <p class="text-lg font-bold text-left text-white">
                 0{{ index + 1 }}
               </p>
               <p
-                class="text-lg font-semibold col-span-4 truncate text-left text-white"
+                class="col-span-4 text-lg font-bold text-left text-white truncate"
               >
                 {{ item.label }}
               </p>
@@ -68,18 +66,17 @@
         }"
         :items="items"
         orientation="vertical"
-        class="w-full"
       >
         <template #default="{ item, index, selected }">
-          <div class="grid grid-cols-5 gap-16px w-full">
+          <div class="grid w-full grid-cols-5 gap-16px">
             <p
-              class="text-lg font-semibold text-left"
+              class="text-lg font-bold text-left"
               :class="[selected ? 'text-white' : 'text-gray-700']"
             >
               0{{ index + 1 }}
             </p>
             <p
-              class="text-lg font-semibold col-span-4 truncate text-left"
+              class="col-span-4 text-lg font-bold text-left truncate"
               :class="[selected ? 'text-white' : 'text-gray-700']"
             >
               {{ item.label }}
@@ -151,7 +148,7 @@
 <script setup>
 const viewport = useViewport();
 
-import influencerPosts from "~/assets/pages/for-creators/influencer-posts.png";
+import businessGoal from "~/assets/pages/for-brands/business-goal.png";
 import influencers from "~/assets/pages/for-creators/talent.png";
 import contentCreation from "~/assets/pages/for-brands/content-creation.png";
 
@@ -159,15 +156,15 @@ let items = [
   {
     slot: "business-goal",
     label: "Tell Us About Your Business Goal",
-    content: `<p class="text-white text-md font-medium mb-8px">
+    content: `<p class="font-medium text-white text-md mb-8px">
                 Share with us about your target market, what you’re promoting, and what our influencers will receive in return.
               </p>`,
-    src: influencerPosts,
+    src: businessGoal,
   },
   {
     slot: "influencers",
     label: "Confirm Your Influencers",
-    content: `<p class="text-white text-md font-medium mb-8px">
+    content: `<p class="font-medium text-white text-md mb-8px">
                 We'll match you with a curated list from our network of over 450 nano and micro influencers and UGC creators.
               </p>`,
     src: influencers,
@@ -175,7 +172,7 @@ let items = [
   {
     slot: "content-creation",
     label: "Get Your Content",
-    content: `<p class="text-white text-md font-medium mb-8px">
+    content: `<p class="font-medium text-white text-md mb-8px">
                 Our creators and influencers will share their experiences with your product and experiences through short videos.
               </p>`,
     src: contentCreation,
