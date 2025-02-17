@@ -13,20 +13,20 @@
       </p>
 
       <UCarousel
-        :ui="{ container: 'gap-16px', item: 'basis-full' }"
         v-if="viewport.isLessThan('tablet')"
+        :ui="{ container: 'gap-16px', item: 'basis-full' }"
         :items="items"
         v-slot="{ item, index }"
         indicators
       >
-        <div :class="viewport.isLessThan('tablet') ? 'flex flex-col' : ''">
+        <div
+          class="flex-grow"
+          :class="viewport.isLessThan('tablet') ? 'pr-24px' : ''"
+        >
           <div
-            class="flex-grow"
-            :class="viewport.isLessThan('tablet') ? 'pr-24px' : ''"
+            class="h-full w-full border-white rounded-md gap-16px border-1 p-16px pb-0 flex flex-col"
           >
-            <div
-              class="grid w-full grid-cols-5 border-white rounded-md gap-16px border-1 px-24px py-8px mb-16px"
-            >
+            <div class="grid-cols-5 grid mb-16px">
               <p class="text-lg font-bold text-left text-white">
                 0{{ index + 1 }}
               </p>
@@ -37,13 +37,13 @@
               </p>
             </div>
 
-            <div v-html="item.content" />
-          </div>
+            <div v-html="item.content" class="flex-grow" />
 
-          <img
-            :src="item.src"
-            class="object-contain object-right-bottom w-full max-h-320px"
-          />
+            <img
+              :src="item.src"
+              class="object-contain object-right-bottom w-full max-h-320px"
+            />
+          </div>
         </div>
       </UCarousel>
       <UTabs
