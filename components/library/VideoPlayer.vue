@@ -8,6 +8,7 @@
     class="h-full w-auto rounded-lg shadow-lg border-1 border-black"
     muted
     loop
+    playsinline
   ></video>
 </template>
 
@@ -21,6 +22,12 @@ const props = defineProps({
 
 const videoRef = ref(null);
 const videoSrc = computed(() => `/highlight/${props.src}`);
+
+onMounted(() => {
+  if (videoRef.value) {
+    videoRef.value.load();
+  }
+});
 
 const playVideo = () => {
   if (videoRef.value) {
