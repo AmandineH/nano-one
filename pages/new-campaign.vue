@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-primary-500 relative">
+    <div class="relative bg-primary-500">
       <div
         class="mx-auto max-w-1300px min-h-[70vh]"
         :class="
@@ -50,7 +50,7 @@
         "
       >
         <div
-          class="border-1 border-white rounded-8px p-16px"
+          class="border-white border-1 rounded-8px p-16px"
           :class="viewport.isLessThan('tablet') ? '' : 'w-1/2'"
         >
           <UForm :state="state" class="grid grid-cols-2 gap-16px">
@@ -113,12 +113,12 @@
           </UForm>
 
           <form
-            name="contact"
+            name="new-campaign"
             method="post"
             data-netlify="true"
             action="./success.html"
           >
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="new-campaign" />
             <input
               type="text"
               name="firstName"
@@ -159,7 +159,7 @@
     <ForCreatorsSocial />
 
     <div
-      class="mx-auto gap-24px max-w-1300px"
+      class="mx-auto max-w-1300px"
       :class="
         viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
       "
@@ -173,6 +173,17 @@
 
 <script setup>
 const viewport = useViewport();
+
+useHead({
+  title: "Start New Campaign | NanoOne",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Unlock Influencer and UGC Marketing—Risk-Free - Join hundreds of local brands tapping into nano and micro-influencers for authentic, high-impact content. Sign up to explore—no commitment, just opportunities.",
+    },
+  ],
+});
 
 definePageMeta({
   layout: "dark",

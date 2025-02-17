@@ -2,11 +2,11 @@
   <div>
     <div class="bg-primary-500">
       <div
-        class="mx-auto gap-24px max-w-1300px"
+        class="mx-auto max-w-1300px"
         :class="
           viewport.isLessThan('tablet')
             ? 'flex flex-col px-16px py-32px'
-            : 'grid grid-cols-5 px-24px py-48px'
+            : 'grid grid-cols-5 px-24px py-48px gap-24px'
         "
       >
         <div
@@ -61,7 +61,7 @@
         </div>
         <img
           src="~/assets/pages/for-brands/hero.png"
-          class="object-contain object-right w-full"
+          class="object-contain object-center w-full"
           :class="
             viewport.isLessThan('tablet')
               ? 'order-1 max-h-200px'
@@ -73,11 +73,12 @@
 
     <ForBrandsWhat />
 
-    <div class="h-10px bg-primary-500 w-full" />
-    <div class="h-10px bg-black w-full" />
-    <div class="h-10px bg-white w-full" />
+    <div class="w-full h-10px bg-primary-500" />
+    <div class="w-full bg-black h-10px" />
+    <div class="w-full bg-white h-10px" />
+
     <!-- <div
-      class="mx-auto gap-24px max-w-1300px"
+      class="mx-auto max-w-1300px"
       :class="
         viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
       "
@@ -97,6 +98,17 @@
 
 <script setup>
 const viewport = useViewport();
+
+useHead({
+  title: "For Brands | NanoOne",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Engage. Influence. Grow Your Brand. - Join a network of creators and work with local brands. Earn free products, exclusive experiences, and paid opportunities—all while doing what you love.",
+    },
+  ],
+});
 
 definePageMeta({
   layout: "dark",
