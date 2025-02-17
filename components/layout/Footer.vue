@@ -33,15 +33,15 @@
           :class="viewport.isLessThan('tablet') ? 'order-3' : 'order-1'"
         >
           <a
-            href="mailto:info@one-each.com"
+            href="mailto:info@nanoone.sg"
             class="text-sm"
             :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
           >
-            info@one-each.com
+            info@nanoone.sg
           </a>
 
           <a
-            href="tel:info@one-each.com"
+            href="tel:+6587772721"
             class="text-sm"
             :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
           >

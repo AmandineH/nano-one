@@ -2,7 +2,7 @@
   <div :class="theme === 'dark' ? 'bg-primary-500' : 'bg-white'">
     <div
       class="flex items-center justify-between mx-auto max-w-1300px"
-      :class="viewport.isLessThan('tablet') ? 'p-16px' : 'px-24px py-16px'"
+      :class="viewport.isLessThan('tablet') ? 'p-16px' : 'px-24px py-32px'"
     >
       <nuxt-link to="/">
         <img

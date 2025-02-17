@@ -228,7 +228,7 @@ const items = [
   {
     label: "Will I get to speak with anyone from your team?",
     content:
-      "Absolutely! Drop us a line via email at info@one-each.com, and we’ll be happy to answer any questions as soon as we can.",
+      "Absolutely! Drop us a line via email at info@nanoone.sg, and we’ll be happy to answer any questions as soon as we can.",
   },
 ].map((element, key) => ({
   ...element,
