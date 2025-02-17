@@ -22,7 +22,7 @@
         @mouseover="play = false"
         @mouseleave="play = true"
       >
-        <div class="h-320px py-24px">
+        <div class="h-[320px] w-[156.5px] py-24px">
           <LibraryVideoPlayer :src="item" />
         </div>
       </UCarousel>
