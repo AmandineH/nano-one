@@ -50,7 +50,7 @@
         "
       >
         <div
-          class="border-white border-1 rounded-8px p-24px"
+          class="border-white border-1 rounded-8px p-16px"
           :class="viewport.isLessThan('tablet') ? '' : 'w-1/2'"
         >
           <UForm :state="state" class="grid grid-cols-2 gap-16px">

@@ -25,7 +25,7 @@
             :class="viewport.isLessThan('tablet') ? 'pr-24px' : ''"
           >
             <div
-              class="grid w-full grid-cols-5 border-white rounded-md gap-16px border-1 px-24px py-8px mb-24px"
+              class="grid w-full grid-cols-5 border-white rounded-md gap-16px border-1 px-24px py-8px mb-16px"
             >
               <p class="text-lg font-bold text-left text-white">
                 0{{ index + 1 }}

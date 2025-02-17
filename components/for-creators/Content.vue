@@ -5,11 +5,8 @@
       :class="viewport.isLessThan('tablet') ? 'py-32px' : 'py-48px'"
     >
       <p
-        class="font-medium text-md"
-        :class="[
-          viewport.isLessThan('tablet') ? 'px-24px' : 'px-24px',
-          theme === 'white' ? '' : 'text-white',
-        ]"
+        class="font-medium text-md px-24px"
+        :class="theme === 'white' ? '' : 'text-white'"
       >
         It’s now easier than ever to build trust and connect with your customers
         because we’ve made creating impactful, attention-grabbing content
@@ -31,11 +28,8 @@
       </UCarousel>
 
       <p
-        class="font-medium text-md"
-        :class="[
-          viewport.isLessThan('tablet') ? 'px-24px' : 'px-24px',
-          theme === 'white' ? '' : 'text-white',
-        ]"
+        class="font-medium text-md px-24px"
+        :class="theme === 'white' ? '' : 'text-white'"
       >
         Our creators are a diverse community of all ages, backgrounds, and
         ethnicities. Covering a vast range of niches, they craft engaging

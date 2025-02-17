@@ -18,16 +18,16 @@
         <div
           v-for="(reason, key) in reasons"
           :key="key"
-          class="grid grid-cols-5 border-white border-1 rounded-8px"
+          class="grid grid-cols-4 border-white border-1 rounded-8px"
         >
-          <div class="col-span-4 p-24px">
-            <p class="text-lg font-bold text-primary-500">
-              {{ reason.title }}
-            </p>
-            <p class="text-white text-md">
-              {{ reason.description }}
-            </p>
-          </div>
+          <p
+            class="col-span-4 text-lg font-bold text-primary-500 px-16px pt-16px"
+          >
+            {{ reason.title }}
+          </p>
+          <p class="col-span-3 text-white text-md px-16px pb-16px">
+            {{ reason.description }}
+          </p>
 
           <div class="relative">
             <img

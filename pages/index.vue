@@ -99,7 +99,7 @@
             <div
               v-for="(number, key) in item.numbers"
               :key="key"
-              class="flex-grow border-black rounded-md border-1 p-24px"
+              class="flex-grow border-black rounded-md border-1 p-16px"
             >
               <p class="text-5xl font-bold text-primary-500">
                 {{ number.num }}
@@ -128,7 +128,7 @@
             <div
               v-for="(number, key) in stat.numbers"
               :key="key"
-              class="flex-grow border-black rounded-md border-1 p-24px"
+              class="flex-grow border-black rounded-md border-1 p-16px"
             >
               <p class="text-5xl font-bold text-primary-500">
                 {{ number.num }}
