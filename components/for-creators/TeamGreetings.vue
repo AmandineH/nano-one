@@ -4,7 +4,7 @@
       class="mx-auto max-w-1300px"
       :class="
         viewport.isLessThan('tablet')
-          ? 'flex flex-col px-16px py-32px'
+          ? 'flex flex-col px-24px py-32px gap-24px'
           : 'grid grid-cols-5 px-24px py-48px gap-24px'
       "
     >

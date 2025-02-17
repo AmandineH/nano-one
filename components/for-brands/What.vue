@@ -4,7 +4,7 @@
       class="mx-auto max-w-1300px"
       :class="
         viewport.isLessThan('tablet')
-          ? 'px-16px py-32px pb-0 pr-0'
+          ? 'px-24px py-32px pb-0 pr-0'
           : 'px-24px py-48px pb-0'
       "
     >
@@ -20,10 +20,10 @@
         <div :class="viewport.isLessThan('tablet') ? 'flex flex-col' : ''">
           <div
             class="flex-grow"
-            :class="viewport.isLessThan('tablet') ? 'pr-16px' : ''"
+            :class="viewport.isLessThan('tablet') ? 'pr-24px' : ''"
           >
             <div
-              class="grid w-full grid-cols-5 border-white rounded-md gap-16px border-1 px-16px py-8px mb-24px"
+              class="grid w-full grid-cols-5 border-white rounded-md gap-16px border-1 px-24px py-8px mb-24px"
             >
               <p class="text-lg font-bold text-left text-white">
                 0{{ index + 1 }}

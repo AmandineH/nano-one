@@ -5,13 +5,13 @@
         class="mx-auto max-w-1300px min-h-[70vh]"
         :class="
           viewport.isLessThan('tablet')
-            ? 'flex flex-col px-16px py-32px pr-0 pb-0'
+            ? 'flex flex-col px-24px py-32px pr-0 pb-0 gap-24px'
             : 'grid grid-cols-5 px-24px py-48px gap-24px'
         "
       >
         <div
           class="flex flex-col justify-center col-span-3"
-          :class="viewport.isLessThan('tablet') ? 'pr-16px' : ''"
+          :class="viewport.isLessThan('tablet') ? 'pr-24px' : ''"
         >
           <p
             class="text-4xl font-bold text-white mb-8px"
@@ -33,7 +33,7 @@
           src="~/assets/pages/new-campaign/hero.png"
           :class="
             viewport.isLessThan('tablet')
-              ? ''
+              ? 'w-2/3 ml-auto'
               : 'absolute bottom-0 right-0 h-full'
           "
         />
@@ -45,12 +45,12 @@
         class="mx-auto max-w-1300px"
         :class="
           viewport.isLessThan('tablet')
-            ? 'px-16px py-32px'
+            ? 'px-24px py-32px'
             : 'px-24px py-48px flex justify-center'
         "
       >
         <div
-          class="border-white border-1 rounded-8px p-16px"
+          class="border-white border-1 rounded-8px p-24px"
           :class="viewport.isLessThan('tablet') ? '' : 'w-1/2'"
         >
           <UForm :state="state" class="grid grid-cols-2 gap-16px">
@@ -156,12 +156,10 @@
       </div>
     </div>
 
-    <ForCreatorsSocial />
-
     <div
       class="mx-auto max-w-1300px"
       :class="
-        viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
+        viewport.isLessThan('tablet') ? 'px-24px py-32px' : 'px-24px py-48px'
       "
     >
       <p class="text-2xl font-bold mb-16px">Frequently Asked Questions</p>

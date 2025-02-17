@@ -5,7 +5,7 @@
         class="mx-auto max-w-1300px"
         :class="
           viewport.isLessThan('tablet')
-            ? 'flex flex-col px-16px py-32px'
+            ? 'flex flex-col px-24px py-32px gap-24px'
             : 'grid grid-cols-5 px-24px py-48px gap-24px'
         "
       >
@@ -74,13 +74,13 @@
 
     <ForCreatorsHow />
 
-    <ForCreatorsSocial />
+    <ForCreatorsContent :theme="'white'" />
 
     <div class="bg-black">
       <div
         class="mx-auto max-w-1300px"
         :class="
-          viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
+          viewport.isLessThan('tablet') ? 'px-24px py-32px' : 'px-24px py-48px'
         "
       >
         <p class="text-2xl font-bold text-white mb-16px">Why Work With Us</p>
@@ -100,11 +100,11 @@
               class="grid flex-grow grid-cols-5 border-white border-1 rounded-8px"
             >
               <p
-                class="col-span-5 text-lg font-bold text-primary-500 px-16px pt-16px"
+                class="col-span-5 text-lg font-bold text-primary-500 px-24px pt-16px"
               >
                 {{ reason.title }}
               </p>
-              <p class="col-span-4 text-white text-md px-16px pb-16px">
+              <p class="col-span-4 text-white text-md px-24px pb-16px">
                 {{ reason.description }}
               </p>
 
@@ -130,7 +130,7 @@
             :key="key"
             class="grid grid-cols-5 border-white border-1 rounded-8px"
           >
-            <div class="col-span-4 p-16px">
+            <div class="col-span-4 p-24px">
               <p class="text-lg font-bold text-primary-500">
                 {{ reason.title }}
               </p>

@@ -5,7 +5,7 @@
         class="mx-auto max-w-1300px"
         :class="
           viewport.isLessThan('tablet')
-            ? 'flex flex-col px-16px py-32px'
+            ? 'flex flex-col px-24px py-32px gap-24px'
             : 'grid grid-cols-5 px-24px py-48px gap-24px'
         "
       >
@@ -73,14 +73,10 @@
 
     <ForBrandsWhat />
 
-    <div class="w-full h-10px bg-primary-500" />
-    <div class="w-full bg-black h-10px" />
-    <div class="w-full bg-white h-10px" />
-
     <!-- <div
       class="mx-auto max-w-1300px"
       :class="
-        viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
+        viewport.isLessThan('tablet') ? 'px-24px py-32px' : 'px-24px py-48px'
       "
     >
       <p class="text-2xl font-bold mb-16px">

@@ -2,7 +2,7 @@
   <div
     class="w-full mx-auto max-w-1300px"
     :class="
-      viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
+      viewport.isLessThan('tablet') ? 'px-24px py-32px' : 'px-24px py-48px'
     "
   >
     <div class="mb-24px">

@@ -4,7 +4,7 @@
       class="mx-auto max-w-1300px"
       :class="
         viewport.isLessThan('tablet')
-          ? 'flex flex-col px-16px py-32px'
+          ? 'flex flex-col px-24px py-32px gap-24px'
           : 'grid grid-cols-2 px-24px py-48px gap-24px'
       "
     >
@@ -31,7 +31,7 @@
           impactful content for meaningful products and experiences.
         </p>
 
-        <div class="flex gap-8px">
+        <div class="flex gap-8px flex-wrap">
           <UButton
             to="/new-campaign"
             color="black"
@@ -66,45 +66,7 @@
       />
     </div>
 
-    <div class="bg-primary-500">
-      <div
-        class="mx-auto max-w-1300px"
-        :class="viewport.isLessThan('tablet') ? 'py-32px' : 'py-48px'"
-      >
-        <p
-          class="font-medium text-white text-md"
-          :class="viewport.isLessThan('tablet') ? 'px-16px' : 'px-24px'"
-        >
-          It’s now easier than ever to build trust and connect with your
-          customers because we’ve made creating impactful, attention-grabbing
-          content effortless and affordable.
-        </p>
-
-        <UCarousel
-          ref="carouselRef"
-          :ui="{ container: 'gap-16px px-16px' }"
-          :items="items"
-          v-slot="{ item }"
-          arrows
-          @mouseover="play = false"
-          @mouseleave="play = true"
-        >
-          <div class="h-320px py-24px">
-            <LibraryVideoPlayer :src="item" />
-          </div>
-        </UCarousel>
-
-        <p
-          class="font-medium text-white text-md"
-          :class="viewport.isLessThan('tablet') ? 'px-16px' : 'px-24px'"
-        >
-          Our creators are a diverse community of all ages, backgrounds, and
-          ethnicities. Covering a vast range of niches, they craft engaging
-          content that resonates with audiences across Instagram and TikTok,
-          driving real impact where it matters most.
-        </p>
-      </div>
-    </div>
+    <ForCreatorsContent />
 
     <ForBrandsWhat />
 
@@ -113,7 +75,7 @@
     <div
       class="mx-auto max-w-1300px"
       :class="
-        viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
+        viewport.isLessThan('tablet') ? 'px-24px py-32px' : 'px-24px py-48px'
       "
     >
       <p class="text-2xl font-bold mb-16px">
@@ -137,7 +99,7 @@
             <div
               v-for="(number, key) in item.numbers"
               :key="key"
-              class="flex-grow border-black rounded-md border-1 p-16px"
+              class="flex-grow border-black rounded-md border-1 p-24px"
             >
               <p class="text-5xl font-bold text-primary-500">
                 {{ number.num }}
@@ -166,7 +128,7 @@
             <div
               v-for="(number, key) in stat.numbers"
               :key="key"
-              class="flex-grow border-black rounded-md border-1 p-16px"
+              class="flex-grow border-black rounded-md border-1 p-24px"
             >
               <p class="text-5xl font-bold text-primary-500">
                 {{ number.num }}
@@ -184,15 +146,18 @@
         class="mx-auto max-w-1300px"
         :class="
           viewport.isLessThan('tablet')
-            ? 'flex flex-col px-16px py-32px'
+            ? 'flex flex-col px-24px py-32px gap-24px'
             : 'grid grid-cols-4 px-24px py-48px gap-24px'
         "
       >
+        <img
+          v-if="viewport.isLessThan('tablet')"
+          src="~/assets/pages/landing/question-mark-mobile.png"
+        />
+
         <div
           class="flex flex-col justify-center"
-          :class="
-            viewport.isLessThan('tablet') ? 'order-2' : 'col-span-3 order-1'
-          "
+          :class="viewport.isLessThan('tablet') ? '' : 'col-span-3'"
         >
           <p class="text-2xl font-bold text-white mb-16px">Did You Know?</p>
 
@@ -224,11 +189,8 @@
         </div>
 
         <img
+          v-if="!viewport.isLessThan('tablet')"
           src="~/assets/pages/landing/question-mark.png"
-          class="object-contain object-center"
-          :class="
-            viewport.isLessThan('tablet') ? 'order-1 max-h-200px' : 'order-2'
-          "
         />
       </div>
     </div>
@@ -247,46 +209,6 @@ useHead({
         "We connect ambitious brands with creators to craft authentic, impactful content for meaningful products and experiences.",
     },
   ],
-});
-
-const items = [
-  "highlight-1.mov",
-  "highlight-2.mov",
-  "highlight-3.mp4",
-  "highlight-4.mp4",
-  "highlight-5.mp4",
-  "highlight-6.mp4",
-  "highlight-7.mp4",
-  "highlight-8.mp4",
-  "highlight-9.mp4",
-  "highlight-10.mp4",
-  "highlight-11.mp4",
-  "highlight-12.mp4",
-  "highlight-13.mp4",
-  "highlight-14.mp4",
-  "highlight-15.mp4",
-  "highlight-16.mp4",
-  "highlight-17.mp4",
-  "highlight-18.mov",
-  "highlight-19.mov",
-];
-
-const carouselRef = ref();
-
-let play = ref(true);
-
-onMounted(() => {
-  setInterval(() => {
-    if (play.value) {
-      if (!carouselRef.value) return;
-
-      if (carouselRef.value.page >= carouselRef.value.pages) {
-        return carouselRef.value.select(0);
-      }
-
-      carouselRef.value.next();
-    }
-  }, 3000);
 });
 
 let stats = [

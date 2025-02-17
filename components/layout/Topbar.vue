@@ -2,7 +2,7 @@
   <div :class="theme === 'dark' ? 'bg-primary-500' : 'bg-white'">
     <div
       class="flex items-center justify-between mx-auto max-w-1300px"
-      :class="viewport.isLessThan('tablet') ? 'p-16px' : 'px-24px py-32px'"
+      :class="viewport.isLessThan('tablet') ? 'p-24px' : 'px-24px py-32px'"
     >
       <nuxt-link to="/">
         <img
@@ -74,7 +74,7 @@
 
       <div
         v-if="isMenuOpen"
-        class="flex flex-col absolute z-10 top-[80px] inset-0 p-16px items-center"
+        class="flex flex-col absolute z-10 top-[80px] inset-0 p-24px items-center"
         :class="theme === 'dark' ? 'bg-primary-500' : 'bg-white'"
       >
         <div class="flex flex-col gap-8px">

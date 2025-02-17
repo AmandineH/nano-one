@@ -3,7 +3,7 @@
     <div
       class="mx-auto max-w-1300px"
       :class="
-        viewport.isLessThan('tablet') ? 'px-16px py-32px' : 'px-24px py-48px'
+        viewport.isLessThan('tablet') ? 'px-24px py-32px' : 'px-24px py-48px'
       "
     >
       <p class="text-2xl font-bold text-white mb-16px">Why Work With Us</p>
@@ -20,7 +20,7 @@
           :key="key"
           class="grid grid-cols-5 border-white border-1 rounded-8px"
         >
-          <div class="col-span-4 p-16px">
+          <div class="col-span-4 p-24px">
             <p class="text-lg font-bold text-primary-500">
               {{ reason.title }}
             </p>
