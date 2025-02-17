@@ -35,7 +35,7 @@
           </p>
 
           <p
-            class="text-lg text-white mb-16px"
+            class="text-lg text-white mb-24px"
             :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
           >
             Connect with a network of trusted nano and micro-influencers who
@@ -73,16 +73,7 @@
 
     <ForBrandsWhat />
 
-    <!-- <div
-      class="mx-auto max-w-1300px"
-      :class="
-        viewport.isLessThan('tablet') ? 'px-24px py-32px' : 'px-24px py-48px'
-      "
-    >
-      <p class="text-2xl font-bold mb-16px">
-        How We Helped Businesses Like Yours
-      </p>
-    </div> -->
+    <ForBrands />
 
     <ForBrandsWhy />
 

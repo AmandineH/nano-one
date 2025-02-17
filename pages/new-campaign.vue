@@ -162,7 +162,7 @@
         viewport.isLessThan('tablet') ? 'px-24px py-32px' : 'px-24px py-48px'
       "
     >
-      <p class="text-2xl font-bold mb-16px">Frequently Asked Questions</p>
+      <p class="text-2xl font-bold mb-24px">Frequently Asked Questions</p>
 
       <UAccordion color="gray" :items="items" />
     </div>

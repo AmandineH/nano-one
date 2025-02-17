@@ -21,7 +21,7 @@ const props = defineProps({
 });
 
 const videoRef = ref(null);
-const videoSrc = computed(() => `/highlight/${props.src}`);
+const videoSrc = computed(() => `${props.src}`);
 
 onMounted(() => {
   if (videoRef.value) {

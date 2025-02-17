@@ -24,7 +24,7 @@
         </p>
 
         <p
-          class="text-lg mb-16px"
+          class="text-lg mb-24px"
           :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
         >
           We connect ambitious brands with creators to craft authentic,
@@ -66,9 +66,11 @@
       />
     </div>
 
-    <ForCreatorsContent />
+    <ForCreators />
 
     <ForBrandsWhat />
+
+    <ForBrands />
 
     <ForBrandsWhy />
 
@@ -78,7 +80,7 @@
         viewport.isLessThan('tablet') ? 'px-24px py-32px' : 'px-24px py-48px'
       "
     >
-      <p class="text-2xl font-bold mb-16px">
+      <p class="text-2xl font-bold mb-24px">
         Why We Work With Nano & Micro Influencers
       </p>
 
@@ -91,7 +93,7 @@
         class="pb-48px"
       >
         <div class="flex flex-col gap-16px">
-          <p class="text-lg font-semibold mb-16px text-primary-500">
+          <p class="text-lg font-semibold mb-24px text-primary-500">
             {{ item.description }}
           </p>
 
@@ -111,7 +113,7 @@
         </div>
       </UCarousel>
       <div v-else>
-        <div class="grid grid-cols-3 gap-24px mb-16px">
+        <div class="grid grid-cols-3 gap-24px mb-24px">
           <div v-for="(stat, key) in stats" :key="key">
             <p class="text-lg font-semibold text-primary-500">
               {{ stat.description }}
@@ -159,7 +161,7 @@
           class="flex flex-col justify-center"
           :class="viewport.isLessThan('tablet') ? '' : 'col-span-3'"
         >
-          <p class="text-2xl font-bold text-white mb-16px">Did You Know?</p>
+          <p class="text-2xl font-bold text-white mb-24px">Did You Know?</p>
 
           <p class="text-white text-md mb-8px">
             As many as <span class="font-extrabold">HALF</span> of your
@@ -167,7 +169,7 @@
             creators to snatch up your market share.
           </p>
 
-          <p class="font-semibold text-white text-md mb-24px">
+          <p class="font-semibold text-white text-md mb-16px">
             Stay ahead of the competition. Get started with your campaign now.
           </p>
 

@@ -35,7 +35,7 @@
           </p>
 
           <p
-            class="text-lg text-white mb-16px"
+            class="text-lg text-white mb-24px"
             :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
           >
             Join a network of creators and work with local brands. Earn free
@@ -74,7 +74,7 @@
 
     <ForCreatorsHow />
 
-    <ForCreatorsContent :theme="'white'" />
+    <ForCreators :theme="'white'" />
 
     <div class="bg-black">
       <div
@@ -83,7 +83,7 @@
           viewport.isLessThan('tablet') ? 'px-24px py-32px' : 'px-24px py-48px'
         "
       >
-        <p class="text-2xl font-bold text-white mb-16px">Why Work With Us</p>
+        <p class="text-2xl font-bold text-white mb-24px">Why Work With Us</p>
 
         <UCarousel
           v-if="viewport.isLessThan('tablet')"

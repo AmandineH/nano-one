@@ -14,7 +14,7 @@
           viewport.isLessThan('tablet') ? 'order-2' : 'col-span-2 order-1'
         "
       >
-        <p class="text-2xl font-bold text-white mb-16px">
+        <p class="text-2xl font-bold text-white mb-24px">
           Greetings From The Team
         </p>
 

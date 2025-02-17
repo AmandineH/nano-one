@@ -8,7 +8,7 @@
           : 'px-24px py-48px pb-0'
       "
     >
-      <p class="text-2xl font-bold text-white mb-16px">What We Do</p>
+      <p class="text-2xl font-bold text-white mb-24px">What We Do</p>
 
       <UCarousel
         v-if="viewport.isLessThan('tablet')"

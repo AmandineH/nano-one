@@ -6,7 +6,7 @@
         viewport.isLessThan('tablet') ? 'px-24px py-32px' : 'px-24px py-48px'
       "
     >
-      <p class="text-2xl font-bold text-white mb-16px">Why Work With Us</p>
+      <p class="text-2xl font-bold text-white mb-24px">Why Work With Us</p>
 
       <div
         :class="
