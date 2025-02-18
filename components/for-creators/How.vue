@@ -4,7 +4,7 @@
       class="mx-auto max-w-1300px"
       :class="
         viewport.isLessThan('tablet')
-          ? 'px-24px py-32px pb-0 pr-0'
+          ? 'px-24px py-32px pr-0'
           : 'px-24px py-48px pb-0'
       "
     >

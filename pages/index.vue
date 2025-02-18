@@ -92,7 +92,7 @@
         indicators
         class="pb-48px"
       >
-        <div class="flex flex-col gap-16px">
+        <div class="flex flex-col">
           <p class="text-lg font-semibold mb-24px text-primary-500">
             {{ item.description }}
           </p>

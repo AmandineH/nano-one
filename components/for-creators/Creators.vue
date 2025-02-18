@@ -13,6 +13,16 @@
         effortless and affordable.
       </p>
 
+      <p
+        class="font-medium text-md px-24px"
+        :class="theme === 'white' ? '' : 'text-white'"
+      >
+        Our creators are a diverse community of all ages, backgrounds, and
+        ethnicities. Covering a vast range of niches, they craft engaging
+        content that resonates with audiences across Instagram and TikTok,
+        driving real impact where it matters most.
+      </p>
+
       <UCarousel
         ref="carouselRef"
         :ui="{ container: 'gap-16px px-24px' }"
@@ -26,16 +36,6 @@
           <LibraryVideoPlayer :src="item" />
         </div>
       </UCarousel>
-
-      <p
-        class="font-medium text-md px-24px"
-        :class="theme === 'white' ? '' : 'text-white'"
-      >
-        Our creators are a diverse community of all ages, backgrounds, and
-        ethnicities. Covering a vast range of niches, they craft engaging
-        content that resonates with audiences across Instagram and TikTok,
-        driving real impact where it matters most.
-      </p>
     </div>
   </div>
 </template>

@@ -27,7 +27,7 @@
           :class="
             viewport.isLessThan('tablet')
               ? 'flex flex-col'
-              : 'min-w-[700px] w-[50vw] grid grid-cols-4'
+              : 'min-w-[600px] w-[40vw] grid grid-cols-3'
           "
         >
           <div class="bg-primary-500 flex flex-col justify-between">
@@ -58,7 +58,7 @@
           </div>
 
           <div
-            class="col-span-3"
+            class="col-span-2"
             :class="viewport.isLessThan('tablet') ? 'p-16px' : 'p-24px'"
           >
             <p class="text-white text-2xl font-bold mb-24px">
@@ -128,8 +128,8 @@ let items = [
     description: `
     <p><span class="font-semibold">Experience:</span> Korean BBQ & Casual Dining</p>
     <p class="mb-16px"><span class="font-semibold">Deliverable Type:</span> Influencer Post</p>
-    <p class="font-semibold"><span class="text-3xl font-bold text-primary-500">2</span> brands</p>
-    <p class="font-semibold"><span class="text-3xl font-bold text-primary-500">10</span> nano influencers</p>
+    <p class="font-semibold mb-8px"><span class="text-3xl font-bold text-primary-500">2</span> brands</p>
+    <p class="font-semibold mb-8px"><span class="text-3xl font-bold text-primary-500">10</span> nano influencers</p>
     <p class="font-semibold"><span class="text-3xl font-bold text-primary-500">21,700+</span> reached</p>`,
     logos: [nami, homeDawn],
     bg: namiBg,
@@ -139,8 +139,8 @@ let items = [
     description: `
     <p><span class="font-semibold">Product:</span> High-Concentration Cave Bird’s Nest</p>
     <p class="mb-16px"><span class="font-semibold">Deliverable Type:</span> Influencer Post</p>
-    <p class="font-semibold"><span class="text-3xl font-bold text-primary-500">3</span> months of daily posting</p>
-    <p class="font-semibold"><span class="text-3xl font-bold text-primary-500">90</span> nano influencers</p>
+    <p class="font-semibold mb-8px"><span class="text-3xl font-bold text-primary-500">3</span> months of daily posting</p>
+    <p class="font-semibold mb-8px"><span class="text-3xl font-bold text-primary-500">90</span> nano influencers</p>
     <p class="font-semibold"><span class="text-3xl font-bold text-primary-500">200k+</span> reached</p>`,
     logos: [bonback],
     bg: bonbackBg,
@@ -150,8 +150,8 @@ let items = [
     description: `
     <p><span class="font-semibold">Product:</span> Toothbrush and Teeth Whitening Kit</p>
     <p class="mb-16px"><span class="font-semibold">Deliverable Type:</span> UGC content</p>
-    <p class="font-semibold"><span class="text-3xl font-bold text-primary-500">1</span> month</p>
-    <p class="font-semibold"><span class="text-3xl font-bold text-primary-500">2</span> products</p>
+    <p class="font-semibold mb-8px"><span class="text-3xl font-bold text-primary-500">1</span> month</p>
+    <p class="font-semibold mb-8px"><span class="text-3xl font-bold text-primary-500">2</span> products</p>
     <p class="font-semibold"><span class="text-3xl font-bold text-primary-500">13</span> videos by unique UGC Creators</p>`,
     logos: [smilefam],
     bg: smilefamBg,
@@ -165,7 +165,6 @@ let brands = [
   "/brands/charcoal-crab.png",
   "/brands/chicas.png",
   "/brands/four-start.png",
-  "/brands/clean-home.png",
   "/brands/printvolution.png",
   "/brands/savoureux.png",
   "/brands/singapaw.png",

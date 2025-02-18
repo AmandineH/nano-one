@@ -106,6 +106,7 @@
 
           <UButton
             to="/new-campaign"
+            color="primary"
             :class="viewport.isLessThan('tablet') ? 'flex-grow' : ''"
           >
             <p

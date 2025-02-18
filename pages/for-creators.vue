@@ -97,7 +97,7 @@
             <div
               v-for="(reason, key) in item"
               :key="key"
-              class="grid flex-grow grid-cols-4 border-white border-1 rounded-8px"
+              class="grid flex-grow grid-cols-4 border-white border-1 rounded-8px relative"
             >
               <p
                 class="col-span-4 text-lg font-bold text-primary-500 px-16px pt-16px"
@@ -108,12 +108,10 @@
                 {{ reason.description }}
               </p>
 
-              <div class="relative">
-                <img
-                  :src="reason.src"
-                  class="absolute bottom-0 right-0 object-contain object-bottom h-full"
-                />
-              </div>
+              <img
+                :src="reason.src"
+                class="absolute bottom-0 right-0 object-contain object-bottom h-full w-1/3"
+              />
             </div>
           </div>
         </UCarousel>
@@ -128,7 +126,7 @@
           <div
             v-for="(reason, key) in reasons"
             :key="key"
-            class="grid grid-cols-4 border-white border-1 rounded-8px"
+            class="grid grid-cols-4 border-white border-1 rounded-8px relative"
           >
             <p
               class="col-span-4 text-lg font-bold text-primary-500 px-16px pt-16px"
@@ -139,12 +137,10 @@
               {{ reason.description }}
             </p>
 
-            <div class="relative">
-              <img
-                :src="reason.src"
-                class="absolute bottom-0 right-0 object-contain object-bottom h-full"
-              />
-            </div>
+            <img
+              :src="reason.src"
+              class="absolute bottom-0 right-0 object-contain object-bottom h-full"
+            />
           </div>
         </div>
       </div>
