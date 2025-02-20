@@ -5,7 +5,7 @@
     @mouseover="playVideo"
     @mouseleave="pauseVideo"
     @click="togglePlay"
-    class="h-full w-auto rounded-lg shadow-lg border-1 border-black"
+    class="h-full w-auto rounded-lg shadow-lg border-1 border-black bg-black"
     muted
     loop
     playsinline
