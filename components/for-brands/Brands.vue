@@ -100,11 +100,11 @@
       <div v-for="(brand, key) in brands" :key="key" class="group">
         <img
           :src="brand"
-          class="object-contain w-full h-full group-hover:hidden grayscale max-h-32px object-center"
+          class="object-contain w-full h-full group-hover:hidden grayscale max-h-[48px] object-center"
         />
         <img
           :src="brand"
-          class="hidden object-contain w-full h-full group-hover:block max-h-32px object-center"
+          class="hidden object-contain w-full h-full group-hover:block max-h-[48px] object-center"
         />
       </div>
     </div>
@@ -164,7 +164,7 @@ let brands = [
   "/brands/bonback.png",
   "/brands/charcoal-crab.png",
   "/brands/chicas.png",
-  "/brands/four-start.png",
+  "/brands/four-star.png",
   "/brands/printvolution.png",
   "/brands/savoureux.png",
   "/brands/singapaw.png",
