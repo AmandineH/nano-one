@@ -15,7 +15,7 @@
 
       <div class="flex flex-col justify-center">
         <p
-          class="text-4xl font-bold mb-8px"
+          class="text-4xl font-bold mb-8px text-black"
           :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
         >
           Effortless
@@ -24,7 +24,7 @@
         </p>
 
         <p
-          class="text-lg mb-24px"
+          class="text-lg mb-24px text-black"
           :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
         >
           We connect ambitious brands with creators to craft authentic,
@@ -80,7 +80,7 @@
         viewport.isLessThan('tablet') ? 'px-24px py-32px' : 'px-24px py-48px'
       "
     >
-      <p class="text-2xl font-bold mb-24px">
+      <p class="text-2xl font-bold mb-24px text-black">
         Why We Work With Nano & Micro Influencers
       </p>
 
@@ -107,7 +107,7 @@
                 {{ number.num }}
               </p>
 
-              <p v-html="number.description" class="text-md" />
+              <p v-html="number.description" class="text-md text-black" />
             </div>
           </div>
         </div>
@@ -136,7 +136,7 @@
                 {{ number.num }}
               </p>
 
-              <p v-html="number.description" class="text-md" />
+              <p v-html="number.description" class="text-md text-black" />
             </div>
           </div>
         </div>

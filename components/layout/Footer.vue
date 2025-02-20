@@ -34,7 +34,7 @@
         >
           <a
             href="mailto:info@nanoone.sg"
-            class="text-sm"
+            class="text-sm text-black"
             :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
           >
             info@nanoone.sg
@@ -42,14 +42,14 @@
 
           <a
             href="tel:+6587772721"
-            class="text-sm"
+            class="text-sm text-black"
             :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
           >
             +65 8777 2721
           </a>
 
           <div
-            class="text-sm"
+            class="text-sm text-black"
             :class="viewport.isLessThan('tablet') ? 'text-center' : ''"
           >
             <p>SQ Collective</p>

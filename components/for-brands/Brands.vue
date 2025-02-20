@@ -5,7 +5,7 @@
       viewport.isLessThan('tablet') ? 'px-24px py-32px' : 'px-24px py-48px'
     "
   >
-    <p class="text-2xl font-bold mb-24px">
+    <p class="text-2xl font-bold mb-24px text-black">
       How We Helped Businesses Like Yours
     </p>
 
