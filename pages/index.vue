@@ -203,7 +203,7 @@
 const viewport = useViewport();
 
 useHead({
-  title: "NanoOne",
+  title: "NanoOne Influencers",
   meta: [
     {
       name: "description",

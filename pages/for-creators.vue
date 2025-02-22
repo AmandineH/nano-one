@@ -159,7 +159,7 @@ definePageMeta({
 });
 
 useHead({
-  title: "For Creators | NanoOne",
+  title: "For Creators | NanoOne Influencers",
   meta: [
     {
       name: "description",

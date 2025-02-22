@@ -173,7 +173,7 @@
 const viewport = useViewport();
 
 useHead({
-  title: "Start New Campaign | NanoOne",
+  title: "Start New Campaign | NanoOne Influencers",
   meta: [
     {
       name: "description",

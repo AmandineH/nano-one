@@ -55,7 +55,7 @@
 const viewport = useViewport();
 
 useHead({
-  title: "Privacy Policy | NanoOne",
+  title: "Privacy Policy | NanoOne Influencers",
 });
 
 let items = [

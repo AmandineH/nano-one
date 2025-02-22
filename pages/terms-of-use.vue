@@ -59,7 +59,7 @@
 const viewport = useViewport();
 
 useHead({
-  title: "Terms of Use | NanoOne",
+  title: "Terms of Use | NanoOne Influencers",
 });
 
 let items = [

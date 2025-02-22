@@ -87,7 +87,7 @@
 const viewport = useViewport();
 
 useHead({
-  title: "For Brands | NanoOne",
+  title: "For Brands | NanoOne Influencers",
   meta: [
     {
       name: "description",
