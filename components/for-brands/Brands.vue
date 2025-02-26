@@ -5,7 +5,7 @@
       viewport.isLessThan('tablet') ? 'px-24px py-32px' : 'px-24px py-48px'
     "
   >
-    <p class="text-2xl font-bold mb-24px text-black">
+    <p class="text-2xl font-bold text-black mb-24px">
       How We Helped Businesses Like Yours
     </p>
 
@@ -23,16 +23,16 @@
     >
       <template #default="{ item }">
         <div
-          class="bg-black rounded-lg overflow-hidden h-full"
+          class="h-full overflow-hidden bg-black rounded-lg"
           :class="
             viewport.isLessThan('tablet')
               ? 'flex flex-col'
               : 'min-w-[600px] w-[40vw] grid grid-cols-3'
           "
         >
-          <div class="bg-primary-500 flex flex-col justify-between">
+          <div class="flex flex-col justify-between bg-primary-500">
             <div
-              class="flex gap-8px justify-center"
+              class="flex justify-center gap-8px"
               :class="viewport.isLessThan('tablet') ? 'p-16px' : 'p-24px'"
             >
               <img
@@ -61,7 +61,7 @@
             class="col-span-2"
             :class="viewport.isLessThan('tablet') ? 'p-16px' : 'p-24px'"
           >
-            <p class="text-white text-2xl font-bold mb-24px">
+            <p class="text-2xl font-bold text-white mb-24px">
               {{ item.title }}
             </p>
             <div v-html="item.description" class="text-white text-md" />
@@ -94,7 +94,7 @@
       :class="
         viewport.isLessThan('tablet')
           ? 'grid grid-cols-3 gap-24px'
-          : 'grid grid-cols-6 gap-32px'
+          : 'grid grid-cols-7 gap-32px'
       "
     >
       <div v-for="(brand, key) in brands" :key="key" class="group">
@@ -171,5 +171,7 @@ let brands = [
   "/brands/smilefam.png",
   "/brands/claypot-prawn.png",
   "/brands/work-store.png",
+  "/brands/my-clean-home.jpg",
+  "/brands/stellar-k.jpg",
 ];
 </script>
