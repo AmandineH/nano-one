@@ -89,6 +89,7 @@
               to="/for-brands"
               :variant="theme === 'dark' ? 'solid' : 'ghost'"
               color="primary"
+              @click="isMenuOpen = false"
             />
           </nuxt-link>
 
@@ -103,6 +104,7 @@
               to="/for-creators"
               :variant="theme === 'dark' ? 'solid' : 'ghost'"
               color="primary"
+              @click="isMenuOpen = false"
             />
           </nuxt-link>
         </div>
