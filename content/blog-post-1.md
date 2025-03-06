@@ -1,6 +1,6 @@
 ---
-title: 'Blog Post 1'
-description: 'meta description of the page'
+title: Blog Post 1
+description: meta description of the page
 ---
 
 # Blog Post 1
